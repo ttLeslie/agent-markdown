@@ -1,0 +1,27 @@
+{
+  "name": "@agentX/utils",
+  "description": "@agentX utils library",
+  "version": "1.0.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "rimraf dist && rollup -c rollup.config.mjs",
+    "clean": "rimraf .turbo node_modules dist",
+    "publish": "pnpm publish"
+  },
+  "devDependencies": {
+    "@agentX/typescript-config": "workspace:*",
+    "@rollup/plugin-json": "catalog:",
+    "rollup": "catalog:",
+    "rollup-plugin-dts": "catalog:",
+    "rollup-plugin-esbuild": "catalog:"
+  }
+}

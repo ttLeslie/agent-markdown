@@ -1,0 +1,18 @@
+/** 注释掉的都是不能继承的属性，需要在包里面重新配置 */
+{
+  "extends": "./base.json",
+  // 包含的文件路径
+  // "include": ["src/**/*.ts", "src/**/*.d.ts"],
+  "compilerOptions": {
+    // 指定 ECMAScript 目标版本
+    "target": "ESNext",
+    // 生成声明文件
+    "declaration": true,
+    // 移除 .d.ts.map 文件映射
+    "declarationMap": false
+    // 声明文件输出目录
+    // "declarationDir": "./dist",
+    // 输出目录
+    // "outDir": "./dist"
+  }
+}

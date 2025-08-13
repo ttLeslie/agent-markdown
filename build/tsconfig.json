@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": false,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": false,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["../packages/*/src"],
+      "~/_utils": ["../packages/ui/src/_utils"]
+    }
+  },
+  "include": [
+    "../packages/*/src/**/*.ts",
+    "../packages/*/src/**/*.d.ts",
+    "../packages/*/src/**/*.tsx",
+    "../packages/*/src/**/*.vue"
+  ],
+  "exclude": ["node_modules", "dist"]
+}

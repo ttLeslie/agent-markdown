@@ -1,0 +1,27 @@
+{
+  "name": "@agentX/build",
+  "description": "glup build config",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:gulp": "gulp -f gulpfile.js",
+    "clean": "rimraf .turbo node_modules dist"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "catalog:",
+    "@rollup/plugin-alias": "catalog:",
+    "@rollup/plugin-babel": "catalog:",
+    "@rollup/plugin-json": "catalog:",
+    "@rollup/plugin-node-resolve": "catalog:",
+    "@rollup/plugin-terser": "catalog:",
+    "@vitejs/plugin-vue": "catalog:",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "gulp": "catalog:",
+    "gulp-clean": "catalog:",
+    "rollup": "catalog:",
+    "rollup-plugin-copy": "catalog:",
+    "rollup-plugin-dts": "catalog:",
+    "rollup-plugin-esbuild": "catalog:",
+    "rollup-plugin-scss": "catalog:"
+  }
+}

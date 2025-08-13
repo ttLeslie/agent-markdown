@@ -1,0 +1,31 @@
+{
+  "name": "@agentX/stylelint-config",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "default": "./index.mjs"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf .turbo node_modules"
+  },
+  "devDependencies": {
+    "postcss": "catalog:",
+    "postcss-html": "catalog:",
+    "postcss-scss": "catalog:",
+    "stylelint": "catalog:",
+    "stylelint-config-recess-order": "catalog:",
+    "stylelint-config-recommended-vue": "catalog:",
+    "stylelint-config-standard": "catalog:",
+    "stylelint-config-standard-scss": "catalog:",
+    "stylelint-scss": "catalog:"
+  },
+  "peerDependencies": {
+    "stylelint": "catalog:"
+  }
+}

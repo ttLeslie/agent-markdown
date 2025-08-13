@@ -1,0 +1,34 @@
+{
+  // 指定 TypeScript 配置文件的 JSON Schema
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    // 禁用项目引用功能
+    "composite": false,
+    // 生成 .d.ts 声明文件
+    "declaration": true,
+    // 为声明文件生成 source map
+    "declarationMap": true,
+    // 启用 CommonJS 和 ES 模块之间的互操作性
+    "esModuleInterop": true,
+    // 强制文件名大小写一致
+    "forceConsistentCasingInFileNames": true,
+    // 不将源码内联到 source map 中
+    "inlineSources": false,
+    // 将每个文件视为单独的模块
+    "isolatedModules": true,
+    // 使用 ESNext 模块系统
+    "module": "ESNext",
+    // 使用 Bundler 模块解析策略
+    "moduleResolution": "Bundler",
+    // 允许未使用的局部变量
+    "noUnusedLocals": false,
+    // 允许未使用的参数
+    "noUnusedParameters": false,
+    // 保持监视模式下的输出
+    "preserveWatchOutput": true,
+    // 跳过对声明文件的类型检查
+    "skipLibCheck": true,
+    // 启用所有严格的类型检查选项
+    "strict": true
+  }
+}

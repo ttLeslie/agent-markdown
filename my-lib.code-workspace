@@ -1,0 +1,28 @@
+{
+  "folders": [
+    {
+      "name": "@mylib/docs",
+      "path": "apps/docs",
+    },
+    {
+      "name": "@mylib/playground",
+      "path": "playground",
+    },
+    {
+      "name": "@mylib/utils",
+      "path": "packages/utils",
+    },
+    {
+      "name": "@mylib/ui",
+      "path": "packages/ui",
+    },
+    {
+      "name": "@mylib/hooks",
+      "path": "packages/hooks",
+    },
+    {
+      "name": "@mylib/directives",
+      "path": "packages/directives",
+    },
+  ],
+}

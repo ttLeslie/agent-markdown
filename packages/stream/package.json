@@ -1,0 +1,35 @@
+{
+  "name": "@agentX/stream",
+  "description": "@agentX stream library",
+  "version": "1.0.0",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "rimraf dist && rollup -c rollup.config.mjs",
+    "clean": "rimraf .turbo node_modules dist",
+    "publish": "pnpm publish",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@agentX/typescript-config": "workspace:*",
+    "@rollup/plugin-json": "catalog:",
+    "@types/node": "^24.1.0",
+    "rollup": "catalog:",
+    "rollup-plugin-dts": "catalog:",
+    "rollup-plugin-esbuild": "catalog:",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "@microsoft/fetch-event-source": "^2.0.1"
+  }
+}

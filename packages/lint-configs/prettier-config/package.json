@@ -1,0 +1,23 @@
+{
+  "name": "@agentX/prettier-config",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "default": "./index.mjs"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf .turbo node_modules"
+  },
+  "devDependencies": {
+    "prettier": "catalog:"
+  },
+  "peerDependencies": {
+    "prettier": "catalog:"
+  }
+}

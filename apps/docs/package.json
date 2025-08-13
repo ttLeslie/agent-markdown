@@ -1,0 +1,29 @@
+{
+  "name": "@agentX/docs",
+  "version": "1.0.0",
+  "description": "组件库模板说明文档",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "rimraf .vitepress/dist && vitepress build",
+    "preview": "vitepress preview",
+    "clean": "rimraf .turbo node_modules .vitepress/dist .vitepress/cache .vitepress/.temp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@agentX/directives": "workspace:*",
+    "@agentX/hooks": "workspace:*",
+    "@agentX/typescript-config": "workspace:*",
+    "@agentX/ui": "workspace:*",
+    "@agentX/utils": "workspace:*",
+    "vue": "catalog:"
+  },
+  "devDependencies": {
+    "sass": "catalog:",
+    "typescript": "catalog:",
+    "vitepress": "catalog:",
+    "vitepress-demo-plugin": "catalog:"
+  }
+}

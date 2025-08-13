@@ -1,0 +1,30 @@
+{
+  "recommendations": [
+    // Vue 3 的语言支持
+    "Vue.volar",
+    // 将 ESLint JavaScript 集成到 VS Code 中。
+    "dbaeumer.vscode-eslint",
+    // Visual Studio Code 的官方 Stylelint 扩展
+    "stylelint.vscode-stylelint",
+    // 使用 Prettier 的代码格式化程序
+    "esbenp.prettier-vscode",
+    // 支持 dotenv 文件语法
+    "mikestead.dotenv",
+    // iconify 图标插件
+    "antfu.iconify",
+    // Markdown 格式化支持
+    "yzhang.markdown-all-in-one",
+    // 统一编辑器代码风格
+    "editorconfig.editorconfig",
+    // 显示 PNPM catalogs 版本信息
+    "antfu.pnpm-catalog-lens",
+    // 单词拼写检查
+    "streetsidesoftware.code-spell-checker",
+    // 多行字符串高亮
+    "tobermory.es6-string-html"
+  ],
+  "unwantedRecommendations": [
+    // 和 volar 冲突
+    "octref.vetur"
+  ]
+}

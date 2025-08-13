@@ -1,0 +1,81 @@
+{
+  "name": "vue3-component-lib-template",
+  "description": "This is a modern component library template based on Turborepo + Vue 3.5 + TypeScript.",
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.15.9",
+  "author": "huangmingfu <212149997@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/huangmingfu/vue3-turbo-component-lib-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huangmingfu/vue3-turbo-component-lib-template"
+  },
+  "bugs": "https://github.com/huangmingfu/vue3-turbo-component-lib-template/issues",
+  "keywords": [
+    "component library template",
+    "component library",
+    "ui framework",
+    "ui",
+    "turborepo",
+    "monorepo",
+    "vue3 typescript",
+    "vite6",
+    "turbo"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:docs": "pnpm -F @agentX/docs run dev",
+    "dev:play": "pnpm -F @agentX/playground run dev",
+    "build": "turbo run build",
+    "build:docs": "pnpm -F @agentX/docs run build",
+    "build:gulp": "gulp -f build/gulpfile.js",
+    "publish": "turbo run publish",
+    "lint:eslint": "eslint --max-warnings 0 \"**/*.{ts,tsx,js,jsx,cjs,mjs,vue}\" --fix",
+    "lint:format": "prettier --write \"**/*.{js,jsx,cjs,ts,tsx,mjs,mts,md,vue,scss,css,less,html,json}\"",
+    "lint:style": "stylelint \"**/*.{css,scss,less}\" --fix",
+    "lint:all": "pnpm run lint:eslint && pnpm run lint:style && pnpm run lint:format",
+    "clean": "turbo run clean --continue && rimraf .turbo dist && rm -rf node_modules",
+    "changeset:version": "pnpm changeset && pnpm changeset version",
+    "deps:update": "pnpm update -r --latest",
+    "deps:check": "pnpm outdated -r",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "turbo run build",
+    "prepare": "husky install",
+    "rename-pkg": "bash ./scripts/rename-package.sh"
+  },
+  "devDependencies": {
+    "@changesets/cli": "catalog:",
+    "@commitlint/cli": "catalog:",
+    "@agentX/commitlint-config": "workspace:*",
+    "@agentX/directives": "workspace:*",
+    "@agentX/eslint-config": "workspace:*",
+    "@agentX/hooks": "workspace:*",
+    "@agentX/prettier-config": "workspace:*",
+    "@agentX/stylelint-config": "workspace:*",
+    "@agentX/typescript-config": "workspace:*",
+    "@agentX/ui": "workspace:*",
+    "@agentX/utils": "workspace:*",
+    "eslint": "catalog:",
+    "husky": "catalog:",
+    "lint-staged": "catalog:",
+    "prettier": "catalog:",
+    "rollup": "catalog:",
+    "stylelint": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:",
+    "vue": "catalog:",
+    "rimraf": "catalog:"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "search-insights"
+      ]
+    }
+  }
+}

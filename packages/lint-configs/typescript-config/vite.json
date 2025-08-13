@@ -1,0 +1,28 @@
+{
+  // 继承基础配置
+  "extends": "./base.json",
+  "compilerOptions": {
+    // 指定 ECMAScript 目标版本
+    "target": "ESNext",
+    // 使用 define 语法定义类字段
+    "useDefineForClassFields": true,
+    // 使用 ESNext 模块系统
+    "module": "ESNext",
+    // 包含的库文件
+    "lib": ["ESNext", "DOM"],
+    // 指定类型定义文件
+    "types": ["node", "vite/client"],
+    // 生成源映射文件
+    "sourceMap": true,
+    // 允许导入 JSON 模块
+    "resolveJsonModule": true,
+    // 不生成输出文件
+    "noEmit": true,
+    // 报告未使用的局部变量
+    "noUnusedLocals": true,
+    // 报告未使用的参数
+    "noUnusedParameters": true,
+    // 检查函数是否有隐式返回
+    "noImplicitReturns": true
+  }
+}

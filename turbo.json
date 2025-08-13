@@ -1,0 +1,31 @@
+{
+  // Turbo 配置文件的 JSON Schema
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    // 构建任务
+    "build": {
+      // 依赖其他包的 build 任务完成
+      "dependsOn": ["^build"],
+      // 构建任务的输入文件
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      // 构建任务的输出目录
+      "outputs": ["dist/**"]
+    },
+    // lint 检查任务
+    "lint": {},
+    // 清理任务
+    "clean": {},
+    // 开发任务
+    "dev": {
+      // 不缓存开发任务
+      "cache": false,
+      // 持久运行的任务
+      "persistent": true
+    },
+    // 发包
+    "publish": {
+      // 任务开始运行前需要完成的任务列表
+      "dependsOn": ["build"] // 发包前先打包
+    }
+  }
+}
