@@ -405,6 +405,36 @@ importers:
 
   packages/lint-configs/typescript-config: {}
 
+  packages/markdown:
+    devDependencies:
+      '@agentX/typescript-config':
+        specifier: workspace:*
+        version: link:../lint-configs/typescript-config
+      '@types/node':
+        specifier: 'catalog:'
+        version: 22.13.4
+      '@vitejs/plugin-vue':
+        specifier: 'catalog:'
+        version: 5.2.1(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
+      '@vitejs/plugin-vue-jsx':
+        specifier: 'catalog:'
+        version: 4.1.1(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
+      sass:
+        specifier: 'catalog:'
+        version: 1.85.0
+      typescript:
+        specifier: 'catalog:'
+        version: 5.7.3
+      vite:
+        specifier: 'catalog:'
+        version: 6.1.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0)
+      vite-plugin-dts:
+        specifier: 'catalog:'
+        version: 4.5.0(@types/node@22.13.4)(rollup@4.34.7)(typescript@5.7.3)(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.13(typescript@5.7.3)
+
   packages/stream:
     dependencies:
       '@microsoft/fetch-event-source':
@@ -6693,7 +6723,7 @@ snapshots:
 
   '@types/conventional-commits-parser@5.0.1':
     dependencies:
-      '@types/node': 22.13.4
+      '@types/node': 24.1.0
 
   '@types/deep-eql@4.0.2': {}
 
@@ -6701,12 +6731,12 @@ snapshots:
 
   '@types/fs-extra@8.1.5':
     dependencies:
-      '@types/node': 22.13.4
+      '@types/node': 24.1.0
 
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 22.13.4
+      '@types/node': 24.1.0
 
   '@types/hast@3.0.4':
     dependencies:
