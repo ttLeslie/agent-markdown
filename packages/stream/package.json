@@ -1,6 +1,6 @@
 {
-  "name": "@agentX/stream",
-  "description": "@agentX stream library",
+  "name": "@useAgent/stream",
+  "description": "@useAgent stream library",
   "version": "1.0.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.mjs",
@@ -21,7 +21,7 @@
     "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
-    "@agentX/typescript-config": "workspace:*",
+    "@useAgent/typescript-config": "workspace:*",
     "@rollup/plugin-json": "catalog:",
     "@types/node": "^24.1.0",
     "rollup": "catalog:",

@@ -1,8 +1,8 @@
 {
-  "extends": "@agentX/typescript-config/vite.json",
+  "extends": "@useAgent/typescript-config/vite.json",
   "compilerOptions": {
     "skipLibCheck": true,
-    "types": ["vite/client", "@agentX/ui/global.d.ts"],
+    "types": ["vite/client", "@useAgent/ui/global.d.ts"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",

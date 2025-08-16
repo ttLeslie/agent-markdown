@@ -7,5 +7,5 @@
   "access": "public",
   "baseBranch": "master",
   "updateInternalDependencies": "patch",
-  "ignore": ["@agentX/build", "@agentX/playground", "@agentX/docs"]
+  "ignore": ["@useAgent/build", "@useAgent/playground", "@useAgent/docs"]
 }

@@ -1,4 +1,4 @@
-# @agentX/stream
+# @useAgent/stream
 
 ## 1.0.0
 

@@ -5,7 +5,7 @@
 > Determines if a value is a string.
 
 ```ts
-import { isString } from '@agentX/utils';
+import { isString } from '@useAgent/utils';
 
 isString('hello'); // true
 isString(123); // false

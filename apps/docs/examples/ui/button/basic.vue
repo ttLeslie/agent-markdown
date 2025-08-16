@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-// import { VButton } from '@agentX/ui';
+// import { VButton } from '@useAgent/ui';
 </script>
 
 <style scoped>

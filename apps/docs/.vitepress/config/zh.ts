@@ -31,22 +31,22 @@ export const zh = defineConfig({
         items: [{ text: '介绍', link: '/guide/index' }],
       },
       {
-        text: '组件（@agentX/ui）',
+        text: '组件（@useAgent/ui）',
         items: [
           { text: 'Button 按钮', link: '/packages/ui/button' },
           { text: 'Dialog 对话框', link: '/packages/ui/dialog' },
         ],
       },
       {
-        text: 'Hooks（@agentX/hooks）',
+        text: 'Hooks（@useAgent/hooks）',
         items: [{ text: 'useCounter 计数器', link: '/packages/hooks/useCounter' }],
       },
       {
-        text: '指令（@agentX/directives）',
+        text: '指令（@useAgent/directives）',
         items: [{ text: 'vFocus 聚焦', link: '/packages/directives/vFocus' }],
       },
       {
-        text: '工具函数（@agentX/utils）',
+        text: '工具函数（@useAgent/utils）',
         items: [{ text: '字符串工具', link: '/packages/utils/string' }],
       },
     ],

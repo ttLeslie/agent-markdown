@@ -1,5 +1,5 @@
 {
-  "name": "@agentX/playground",
+  "name": "@useAgent/playground",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,11 +10,11 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "catalog:",
-    "@agentX/directives": "workspace:*",
-    "@agentX/hooks": "workspace:*",
-    "@agentX/typescript-config": "workspace:*",
-    "@agentX/ui": "workspace:*",
-    "@agentX/utils": "workspace:*",
+    "@useAgent/directives": "workspace:*",
+    "@useAgent/hooks": "workspace:*",
+    "@useAgent/typescript-config": "workspace:*",
+    "@useAgent/ui": "workspace:*",
+    "@useAgent/utils": "workspace:*",
     "ant-design-vue": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"

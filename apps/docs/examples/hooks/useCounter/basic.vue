@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import { useCounter } from '@agentX/hooks';
+import { useCounter } from '@useAgent/hooks';
 
 const { count, increment, decrement } = useCounter();
 </script>

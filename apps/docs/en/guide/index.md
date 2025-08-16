@@ -16,19 +16,19 @@ Install using a package manager:
 ::: code-group
 
 ```bash [npm]
-npm install @agentX/ui @agentX/utils @agentX/hooks @agentX/directives
+npm install @useAgent/ui @useAgent/utils @useAgent/hooks @useAgent/directives
 ```
 
 ```bash [yarn]
-yarn add @agentX/ui @agentX/utils @agentX/hooks @agentX/directives
+yarn add @useAgent/ui @useAgent/utils @useAgent/hooks @useAgent/directives
 ```
 
 ```bash [pnpm]
-pnpm add @agentX/ui @agentX/utils @agentX/hooks @agentX/directives
+pnpm add @useAgent/ui @useAgent/utils @useAgent/hooks @useAgent/directives
 ```
 
 ```bash [bun]
-bun add @agentX/ui @agentX/utils @agentX/hooks @agentX/directives
+bun add @useAgent/ui @useAgent/utils @useAgent/hooks @useAgent/directives
 ```
 
 :::
@@ -40,16 +40,16 @@ bun add @agentX/ui @agentX/utils @agentX/hooks @agentX/directives
 ```ts
 // Global import
 import { createApp } from 'vue';
-import UI from '@agentX/ui';
-import '@agentX/ui/style.css';
+import UI from '@useAgent/ui';
+import '@useAgent/ui/style.css';
 const app = createApp(App);
 app.use(UI);
 // Additionally, add the following configuration to tsconfig.json for type hints:
-// "types": ["@agentX/ui/global.d.ts"]
+// "types": ["@useAgent/ui/global.d.ts"]
 
 // Import on demand
-import { Button } from '@agentX/ui';
-import '@agentX/ui/style.css';
+import { Button } from '@useAgent/ui';
+import '@useAgent/ui/style.css';
 const app = createApp(App);
 app.use(Button);
 ```
@@ -57,25 +57,25 @@ app.use(Button);
 ### Utility Functions
 
 ```ts
-import { isString } from '@agentX/utils';
+import { isString } from '@useAgent/utils';
 console.log(isString('hello')); // true
 ```
 
 ### Hooks
 
 ```ts
-import { useCounter } from '@agentX/hooks';
+import { useCounter } from '@useAgent/hooks';
 const { count, increment, decrement } = useCounter();
 ```
 
 ### Directives
 
 ```ts
-import { vFocus } from '@agentX/directives';
+import { vFocus } from '@useAgent/directives';
 // Global import
 app.directive('focus', vFocus);
 
 // Import on demand
-import { vFocus } from '@agentX/directives';
+import { vFocus } from '@useAgent/directives';
 app.directive('focus', vFocus);
 ```

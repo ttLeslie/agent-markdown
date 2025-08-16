@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import { vFocus } from '@agentX/directives';
+import { vFocus } from '@useAgent/directives';
 </script>

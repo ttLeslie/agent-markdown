@@ -1,4 +1,4 @@
-# @agentX/hooks
+# @useAgent/hooks
 
 ## 1.0.0
 

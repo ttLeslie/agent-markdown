@@ -1,12 +1,12 @@
 ---
 layout: home
 hero:
-  name: AgentX
+  name: useAgent
   text: 大模型应用解决方案
   tagline: 易上手、高拓展和企业级的 Vue3 前端接入大模型最佳实践方案，帮助前端开发者快速搭建企业级大模型应用。
   image:
     src: /logo.png
-    alt: AgentX
+    alt: useAgent
   actions:
     - theme: brand
       text: 开始使用

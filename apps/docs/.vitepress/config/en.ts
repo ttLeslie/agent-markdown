@@ -31,22 +31,22 @@ export const en = defineConfig({
         items: [{ text: 'Introduction', link: 'en/guide/index' }],
       },
       {
-        text: 'Components (@agentX/ui)',
+        text: 'Components (@useAgent/ui)',
         items: [
           { text: 'Button', link: 'en/packages/ui/button' },
           { text: 'Dialog', link: 'en/packages/ui/dialog' },
         ],
       },
       {
-        text: 'Hooks (@agentX/hooks)',
+        text: 'Hooks (@useAgent/hooks)',
         items: [{ text: 'useCounter', link: 'en/packages/hooks/useCounter' }],
       },
       {
-        text: 'Directives (@agentX/directives)',
+        text: 'Directives (@useAgent/directives)',
         items: [{ text: 'vFocus', link: 'en/packages/directives/vFocus' }],
       },
       {
-        text: 'Utilities (@agentX/utils)',
+        text: 'Utilities (@useAgent/utils)',
         items: [{ text: 'String Utils', link: 'en/packages/utils/string' }],
       },
     ],

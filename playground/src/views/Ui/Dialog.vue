@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { VDialog } from '~/@agentX/ui';
+import { VDialog } from '~/@useAgent/ui';
 import { ref } from 'vue';
 console.log(VDialog);
 const open = ref(false);

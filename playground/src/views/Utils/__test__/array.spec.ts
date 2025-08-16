@@ -1,4 +1,4 @@
-import { chunk, unique } from '@agentX/utils';
+import { chunk, unique } from '@useAgent/utils';
 import { describe, expect, it } from 'vitest';
 
 describe('array工具', () => {

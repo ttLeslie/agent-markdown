@@ -11,10 +11,10 @@
 </template>
 
 <script setup lang="ts">
-// import { VButton } from '~/@agentX/ui'; // 本地实时调试，组件修改代码，立马能看到效果，不需要打包
-// import { VButton } from '@agentX/ui'; // 从node_modules/@agentX/ui/dist/es里面引入的，需要打包ui库
+// import { VButton } from '~/@useAgent/ui'; // 本地实时调试，组件修改代码，立马能看到效果，不需要打包
+// import { VButton } from '@useAgent/ui'; // 从node_modules/@useAgent/ui/dist/es里面引入的，需要打包ui库
 // 导出类型测试
-// import type { ButtonProps } from '@agentX/ui';
+// import type { ButtonProps } from '@useAgent/ui';
 // const buttonProps: ButtonProps = {
 //   type: 'primary',
 // };

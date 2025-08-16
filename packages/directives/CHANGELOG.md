@@ -1,4 +1,4 @@
-# @agentX/directives
+# @useAgent/directives
 
 ## 1.0.0
 

@@ -16,19 +16,19 @@ mylib-template 是一个基于 Vue3 的组件库和工具集模板项目，包�
 ::: code-group
 
 ```bash [npm]
-npm install @agentX/ui @agentX/utils @agentX/hooks @agentX/directives
+npm install @useAgent/ui @useAgent/utils @useAgent/hooks @useAgent/directives
 ```
 
 ```bash [yarn]
-yarn add @agentX/ui @agentX/utils @agentX/hooks @agentX/directives
+yarn add @useAgent/ui @useAgent/utils @useAgent/hooks @useAgent/directives
 ```
 
 ```bash [pnpm]
-pnpm add @agentX/ui @agentX/utils @agentX/hooks @agentX/directives
+pnpm add @useAgent/ui @useAgent/utils @useAgent/hooks @useAgent/directives
 ```
 
 ```bash [bun]
-bun add @agentX/ui @agentX/utils @agentX/hooks @agentX/directives
+bun add @useAgent/ui @useAgent/utils @useAgent/hooks @useAgent/directives
 ```
 
 :::
@@ -40,16 +40,16 @@ bun add @agentX/ui @agentX/utils @agentX/hooks @agentX/directives
 ```ts
 // 全局引入
 import { createApp } from 'vue';
-import UI from '@agentX/ui';
-import '@agentX/ui/style.css';
+import UI from '@useAgent/ui';
+import '@useAgent/ui/style.css';
 const app = createApp(App);
 app.use(UI);
 //  tsconfig.json 还需要添加以下配置以获得类型提示：
-//  "types": ["@agentX/ui/global.d.ts"]
+//  "types": ["@useAgent/ui/global.d.ts"]
 
 // 按需引入
-import { Button } from '@agentX/ui';
-import '@agentX/ui/style.css';
+import { Button } from '@useAgent/ui';
+import '@useAgent/ui/style.css';
 const app = createApp(App);
 app.use(Button);
 ```
@@ -57,25 +57,25 @@ app.use(Button);
 ### 工具函数
 
 ```ts
-import { isString } from '@agentX/utils';
+import { isString } from '@useAgent/utils';
 console.log(isString('hello')); // true
 ```
 
 ### Hooks
 
 ```ts
-import { useCounter } from '@agentX/hooks';
+import { useCounter } from '@useAgent/hooks';
 const { count, increment, decrement } = useCounter();
 ```
 
 ### 指令
 
 ```ts
-import { vFocus } from '@agentX/directives';
+import { vFocus } from '@useAgent/directives';
 // 全局引入
 app.directive('focus', vFocus);
 
 // 按需引入
-import { vFocus } from '@agentX/directives';
+import { vFocus } from '@useAgent/directives';
 app.directive('focus', vFocus);
 ```

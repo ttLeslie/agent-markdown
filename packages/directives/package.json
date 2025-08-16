@@ -1,7 +1,7 @@
 {
-  "name": "@agentX/directives",
+  "name": "@useAgent/directives",
   "version": "1.0.0",
-  "description": "@agentX directives library",
+  "description": "@useAgent directives library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.mjs",
   "types": "dist/types/index.d.ts",
@@ -18,7 +18,7 @@
     "publish": "pnpm publish"
   },
   "devDependencies": {
-    "@agentX/typescript-config": "workspace:*",
+    "@useAgent/typescript-config": "workspace:*",
     "@rollup/plugin-json": "catalog:",
     "@rollup/plugin-terser": "catalog:",
     "rollup": "catalog:",

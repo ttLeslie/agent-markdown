@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import * as utils from '@agentX/utils';
+import * as utils from '@useAgent/utils';
 
 const allUtils = Object.entries(utils).map(([name, fn], index) => {
   return {

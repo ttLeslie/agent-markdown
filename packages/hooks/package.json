@@ -1,7 +1,7 @@
 {
-  "name": "@agentX/hooks",
+  "name": "@useAgent/hooks",
   "version": "1.0.0",
-  "description": "@agentX hooks library",
+  "description": "@useAgent hooks library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.mjs",
   "types": "dist/types/index.d.ts",
@@ -18,7 +18,7 @@
     "publish": "pnpm publish"
   },
   "devDependencies": {
-    "@agentX/typescript-config": "workspace:*",
+    "@useAgent/typescript-config": "workspace:*",
     "@rollup/plugin-json": "catalog:",
     "rollup": "catalog:",
     "rollup-plugin-dts": "catalog:",

@@ -1,4 +1,4 @@
-import { camelToKebab, capitalize, isString } from '@agentX/utils';
+import { camelToKebab, capitalize, isString } from '@useAgent/utils';
 import { describe, expect, it } from 'vitest';
 
 describe('string工具', () => {

@@ -1,6 +1,6 @@
 {
-  "name": "@agentX/ui",
-  "description": "@agentX ui library",
+  "name": "@useAgent/ui",
+  "description": "@useAgent ui library",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/cjs/index.js",
@@ -29,7 +29,7 @@
     "publish": "pnpm publish"
   },
   "devDependencies": {
-    "@agentX/typescript-config": "workspace:*",
+    "@useAgent/typescript-config": "workspace:*",
     "@types/node": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",

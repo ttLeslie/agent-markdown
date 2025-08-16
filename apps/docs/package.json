@@ -1,5 +1,5 @@
 {
-  "name": "@agentX/docs",
+  "name": "@useAgent/docs",
   "version": "1.0.0",
   "description": "组件库模板说明文档",
   "main": "index.js",
@@ -13,11 +13,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@agentX/directives": "workspace:*",
-    "@agentX/hooks": "workspace:*",
-    "@agentX/typescript-config": "workspace:*",
-    "@agentX/ui": "workspace:*",
-    "@agentX/utils": "workspace:*",
+    "@useAgent/directives": "workspace:*",
+    "@useAgent/hooks": "workspace:*",
+    "@useAgent/typescript-config": "workspace:*",
+    "@useAgent/ui": "workspace:*",
+    "@useAgent/utils": "workspace:*",
     "vue": "catalog:"
   },
   "devDependencies": {

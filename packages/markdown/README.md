@@ -1,4 +1,4 @@
-# @agentX/ui
+# @useAgent/ui
 
 Vue 3 组件库，基于 Vue 3 + TypeScript 构建的现代化组件库。
 
@@ -13,11 +13,11 @@ Vue 3 组件库，基于 Vue 3 + TypeScript 构建的现代化组件库。
 ## 安装
 
 ```bash
-npm install @agentX/ui
+npm install @useAgent/ui
 
-yarn add @agentX/ui
+yarn add @useAgent/ui
 
-pnpm add @agentX/ui
+pnpm add @useAgent/ui
 ```
 
 ## 快速开始
@@ -29,8 +29,8 @@ pnpm add @agentX/ui
 import { createApp } from 'vue';
 import App from './App.vue';
 
-import VUI from '@agentX/ui';
-import '@agentX/ui/style.css';
+import VUI from '@useAgent/ui';
+import '@useAgent/ui/style.css';
 
 const app = createApp(App);
 app.use(VUI);
@@ -44,8 +44,8 @@ app.mount('#app');
 import { createApp } from 'vue';
 import App from './App.vue';
 
-import { Button } from '@agentX/ui';
-import '@agentX/ui/style.css';
+import { Button } from '@useAgent/ui';
+import '@useAgent/ui/style.css';
 
 const app = createApp(App);
 app.use(Button);
@@ -68,7 +68,7 @@ app.mount('#app');
 </template>
 
 <script setup lang="ts">
-import { VButton, VDialog } from '@agentX/ui';
+import { VButton, VDialog } from '@useAgent/ui';
 import { ref } from 'vue';
 const open = ref(false);
 </script>
