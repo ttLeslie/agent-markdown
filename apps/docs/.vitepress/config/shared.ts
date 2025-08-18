@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export const shared = defineConfig({
   // 设置基础路径,用于GitHub Pages部署
-  base: '/vue3-turbo-component-lib-template/',
+  base: '/vue3-useAgent/',
   // 启用最后更新时间
   lastUpdated: true,
   // 生成干净的 URL（去掉.html后缀）

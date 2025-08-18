@@ -2,12 +2,10 @@
 
 ## 介绍
 
-mylib-template 是一个基于 Vue3 的组件库和工具集模板项目，包含以下几个部分：
+useAgent 是一个基于 Vue3 的大模型应用解决方案，提供了以下两个部分：
 
-- UI 组件库：提供常用的 UI 组件
-- 工具函数：提供常用的工具函数
-- Hooks：提供可复用的组合式函数
-- Directives：提供常用的指令
+- Markdown 组件
+- 流式请求工具库
 
 ## 安装
 
@@ -16,26 +14,35 @@ mylib-template 是一个基于 Vue3 的组件库和工具集模板项目，包�
 ::: code-group
 
 ```bash [npm]
-npm install @useAgent/ui @useAgent/utils @useAgent/hooks @useAgent/directives
+npm install @useAgent/markdown @useAgent/stream
 ```
 
 ```bash [yarn]
-yarn add @useAgent/ui @useAgent/utils @useAgent/hooks @useAgent/directives
+yarn add @useAgent/markdown @useAgent/stream
 ```
 
 ```bash [pnpm]
-pnpm add @useAgent/ui @useAgent/utils @useAgent/hooks @useAgent/directives
+pnpm add @useAgent/markdown @useAgent/stream
 ```
 
 ```bash [bun]
-bun add @useAgent/ui @useAgent/utils @useAgent/hooks @useAgent/directives
+bun add @useAgent/markdown @useAgent/stream
 ```
 
 :::
 
 ## 使用
 
-### UI 组件
+
+### 流式请求工具库
+
+```ts
+import { isString } from '@useAgent/utils';
+console.log(isString('hello')); // true
+```
+
+
+### Markdown 组件
 
 ```ts
 // 全局引入
@@ -52,30 +59,4 @@ import { Button } from '@useAgent/ui';
 import '@useAgent/ui/style.css';
 const app = createApp(App);
 app.use(Button);
-```
-
-### 工具函数
-
-```ts
-import { isString } from '@useAgent/utils';
-console.log(isString('hello')); // true
-```
-
-### Hooks
-
-```ts
-import { useCounter } from '@useAgent/hooks';
-const { count, increment, decrement } = useCounter();
-```
-
-### 指令
-
-```ts
-import { vFocus } from '@useAgent/directives';
-// 全局引入
-app.directive('focus', vFocus);
-
-// 按需引入
-import { vFocus } from '@useAgent/directives';
-app.directive('focus', vFocus);
 ```
