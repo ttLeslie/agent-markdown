@@ -17,7 +17,14 @@
     "@useAgent/utils": "workspace:*",
     "ant-design-vue": "catalog:",
     "vue": "catalog:",
-    "vue-router": "catalog:"
+    "vue-router": "catalog:",
+    "@mdit/plugin-katex": "catalog:",
+    "@types/markdown-it": "catalog:",
+    "@types/markdown-it-emoji": "catalog:",
+    "markdown-it": "catalog:",
+    "markdown-it-emoji": "catalog:",
+    "es-toolkit": "catalog:",
+    "highlight.js": "catalog:"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "catalog:",
