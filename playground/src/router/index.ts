@@ -43,6 +43,15 @@ export const routes: RouteRecordRaw[] = [
     },
     component: () => import('@/layouts/container/Utils.vue'),
   },
+  {
+    path: '/markdown',
+    name: 'Markdown',
+    meta: {
+      title: 'Markdown',
+      icon: ToolOutlined,
+    },
+    component: () => import('@/layouts/container/Markdown.vue'),
+  },
 ];
 
 const router = createRouter({

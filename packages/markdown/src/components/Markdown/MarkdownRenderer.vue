@@ -67,32 +67,4 @@ const getMarkdownItInstance = (options: Options) => {
 };
 export default MarkdownRenderer;
 </script>
-<style scoped>
-.markdown {
-  padding: 1rem;
-  font-size: 16px;
-
-  /* 基础样式 */
-  line-height: 1.6;
-}
-
-/* 可以添加Markdown元素的样式 */
-.markdown p {
-  margin-bottom: 1rem;
-}
-
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6 {
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.markdown a {
-  text-decoration: none;
-}
-</style>
+<style scoped></style>
