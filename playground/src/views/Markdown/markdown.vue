@@ -2,11 +2,11 @@
   <div class="container">
     <!-- 控制按钮 -->
     <div class="controls">
-      <button @click="startTyping" :disabled="isTyping" class="control-btn start-btn">
-        <i class="fas fa-play"></i> {{ isTyping ? '正在打字...' : '开始打字' }}
+      <button :disabled="isTyping" class="control-btn start-btn" @click="startTyping">
+        <i class="fas fa-play" /> {{ isTyping ? '正在打字...' : '开始打字' }}
       </button>
-      <button @click="restartTyping" class="control-btn restart-btn">
-        <i class="fas fa-redo"></i> 重新开始
+      <button class="control-btn restart-btn" @click="restartTyping">
+        <i class="fas fa-redo" /> 重新开始
       </button>
     </div>
 
@@ -19,8 +19,8 @@
           <Mermaid :content="rawCode" />
         </template> -->
         <template #javascript="{ lang, rawCode }">
-          <div class="js-code" v-if="rawCode !== ''">
-            <pre><code class="language-js" v-html="setCodeStyle(rawCode, lang)"></code></pre>
+          <div v-if="rawCode !== ''" class="js-code">
+            <pre><code class="language-js" v-html="setCodeStyle(rawCode, lang)" /></pre>
           </div>
         </template>
         <template #localvue="{ rawCode }">
@@ -44,9 +44,9 @@
 </template>
 
 <script setup lang="ts">
-import { VMarkdownRenderer, SUPPORTED_LANGUAGES } from '@useAgent/markdown';
+import { SUPPORTED_LANGUAGES, VMarkdownRenderer } from '@useAgent/markdown';
 import hljs from 'highlight.js';
-import { ref, onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 const handleLinkClick = (href: string, title: string) => {
   console.log(href, title);
 };
@@ -177,7 +177,7 @@ const setCodeStyle = (rawCode: string, lang: string) => {
   const language = SUPPORTED_LANGUAGES.includes(lang) ? lang : 'plaintext';
   try {
     return hljs.highlight(rawCode, { language }).value;
-  } catch (e) {
+  } catch (_) {
     return hljs.highlight(rawCode, { language: 'plaintext' }).value;
   }
 };
@@ -191,42 +191,42 @@ onMounted(() => {
 <style scoped>
 .container {
   max-width: 1000px;
-  margin: 0 auto;
   padding: 2rem;
+  margin: 0 auto;
 }
 
 /* 控制按钮样式 */
 .controls {
-  margin-bottom: 1.5rem;
   display: flex;
   gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .control-btn {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
   padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
   transition: all 0.2s ease;
 }
 
 .start-btn {
-  background-color: #4caf50;
   color: white;
+  background-color: #4caf50;
 }
 
 .start-btn:disabled {
-  background-color: #a5d6a7;
   cursor: not-allowed;
+  background-color: #a5d6a7;
 }
 
 .restart-btn {
-  background-color: #2196f3;
   color: white;
+  background-color: #2196f3;
 }
 
 .control-btn:hover:not(:disabled) {
@@ -236,22 +236,16 @@ onMounted(() => {
 
 .code-content {
   padding: 1rem;
+  overflow-x: auto;
   background: #f5f5f5;
   border-radius: 4px;
-  overflow-x: auto;
 }
 
 .markdown-content {
-  border: 1px solid #eee;
-  border-radius: 8px;
   padding: 2rem;
   background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-:deep(.markdown) {
-  span[aria-hidden='true'] {
-    display: none;
-  }
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 5%);
 }
 </style>
