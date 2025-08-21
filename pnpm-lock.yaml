@@ -24,6 +24,9 @@ catalogs:
     '@eslint/js':
       specifier: 9.20.0
       version: 9.20.0
+    '@mdit/plugin-katex':
+      specifier: ^0.23.1
+      version: 0.23.1
     '@rollup/plugin-alias':
       specifier: ^5.1.1
       version: 5.1.1
@@ -39,6 +42,12 @@ catalogs:
     '@rollup/plugin-terser':
       specifier: ^0.4.4
       version: 0.4.4
+    '@types/markdown-it':
+      specifier: ^14.1.2
+      version: 14.1.2
+    '@types/markdown-it-emoji':
+      specifier: ^3.0.1
+      version: 3.0.1
     '@types/node':
       specifier: ^22.13.4
       version: 22.13.4
@@ -51,6 +60,9 @@ catalogs:
     ant-design-vue:
       specifier: ^4.2.6
       version: 4.2.6
+    es-toolkit:
+      specifier: ^1.39.9
+      version: 1.39.10
     eslint:
       specifier: ^9.20.1
       version: 9.20.1
@@ -63,12 +75,21 @@ catalogs:
     gulp-clean:
       specifier: ^0.4.0
       version: 0.4.0
+    highlight.js:
+      specifier: ^11.11.1
+      version: 11.11.1
     husky:
       specifier: ^9.1.7
       version: 9.1.7
     lint-staged:
       specifier: ^15.4.3
       version: 15.4.3
+    markdown-it:
+      specifier: ^14.1.0
+      version: 14.1.0
+    markdown-it-emoji:
+      specifier: ^3.0.0
+      version: 3.0.0
     postcss:
       specifier: ^8.5.2
       version: 8.5.2
@@ -173,6 +194,9 @@ importers:
       '@useAgent/hooks':
         specifier: workspace:*
         version: link:packages/hooks
+      '@useAgent/markdown':
+        specifier: workspace:*
+        version: link:packages/markdown
       '@useAgent/prettier-config':
         specifier: workspace:*
         version: link:packages/lint-configs/prettier-config
@@ -407,6 +431,15 @@ importers:
 
   packages/markdown:
     devDependencies:
+      '@mdit/plugin-katex':
+        specifier: 'catalog:'
+        version: 0.23.1(markdown-it@14.1.0)
+      '@types/markdown-it':
+        specifier: 'catalog:'
+        version: 14.1.2
+      '@types/markdown-it-emoji':
+        specifier: 'catalog:'
+        version: 3.0.1
       '@types/node':
         specifier: 'catalog:'
         version: 22.13.4
@@ -419,6 +452,18 @@ importers:
       '@vitejs/plugin-vue-jsx':
         specifier: 'catalog:'
         version: 4.1.1(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
+      es-toolkit:
+        specifier: 'catalog:'
+        version: 1.39.10
+      highlight.js:
+        specifier: 'catalog:'
+        version: 11.11.1
+      markdown-it:
+        specifier: 'catalog:'
+        version: 14.1.0
+      markdown-it-emoji:
+        specifier: 'catalog:'
+        version: 3.0.0
       sass:
         specifier: 'catalog:'
         version: 1.85.0
@@ -1726,6 +1771,33 @@ packages:
   '@manypkg/get-packages@1.1.3':
     resolution: {integrity: sha512-fo+QhuU3qE/2TQMQmbVMqaQ6EWbMhi4ABWP+O4AM1NqPBuy0OrApV5LO6BrrgnhtAHS2NH6RrVk9OL181tTi8A==}
 
+  '@mdit/helper@0.22.1':
+    resolution: {integrity: sha512-lDpajcdAk84aYCNAM/Mi3djw38DJq7ocLw5VOSMu/u2YKX3/OD37a6Qb59in8Uyp4SiAbQoSHa8px6hgHEpB5g==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      markdown-it: ^14.1.0
+    peerDependenciesMeta:
+      markdown-it:
+        optional: true
+
+  '@mdit/plugin-katex@0.23.1':
+    resolution: {integrity: sha512-4hyeDzjIqBplwS/NOGHGkxraE3jIi3KJ+WBKmG/dMDvEO+oYovVXY0pTW7/d0SH/4vqhRp6stQ5z+rgPAovhOg==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      markdown-it: ^14.1.0
+    peerDependenciesMeta:
+      markdown-it:
+        optional: true
+
+  '@mdit/plugin-tex@0.22.1':
+    resolution: {integrity: sha512-sCoOHznJjECeWCd0SggYpiZfwDfGGZ5mN3sKQA9PCHVRRXHh0dEl3wwNNvp/L8f6jZ4SpG5mxtPqBvxlPbE5nw==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      markdown-it: ^14.1.0
+    peerDependenciesMeta:
+      markdown-it:
+        optional: true
+
   '@microsoft/api-extractor-model@7.30.3':
     resolution: {integrity: sha512-yEAvq0F78MmStXdqz9TTT4PZ05Xu5R8nqgwI5xmUmQjWBQ9E6R2n8HB/iZMRciG4rf9iwI2mtuQwIzDXBvHn1w==}
 
@@ -2083,6 +2155,9 @@ packages:
 
   '@types/linkify-it@5.0.0':
     resolution: {integrity: sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q==}
+
+  '@types/markdown-it-emoji@3.0.1':
+    resolution: {integrity: sha512-cz1j8R35XivBqq9mwnsrP2fsz2yicLhB8+PDtuVkKOExwEdsVBNI+ROL3sbhtR5occRZ66vT0QnwFZCqdjf3pA==}
 
   '@types/markdown-it@14.1.2':
     resolution: {integrity: sha512-promo4eFwuiW+TfGxhi+0x3czqTYJkG8qB17ZUJiVF10Xm7NLVRSLUsfRTU/6h1e24VvRnXCx+hG7li58lkzog==}
@@ -2701,6 +2776,10 @@ packages:
   commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
 
+  commander@8.3.0:
+    resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
+    engines: {node: '>= 12'}
+
   compare-func@2.0.0:
     resolution: {integrity: sha512-zHig5N+tPWARooBnb0Zx1MFcdfpyJrfTJ3Y5L+IFvUm8rM74hHz66z0gw0x4tijh5CorKkKUCnW82R2vmpeCRA==}
 
@@ -2921,6 +3000,9 @@ packages:
 
   es-module-lexer@1.7.0:
     resolution: {integrity: sha512-jEQoCwk8hyb2AZziIOLhDqpm5+2ww5uIE6lkO/6jcOCusfk6LhMHpXXfBLXTZ7Ydyt0j4VoUQv6uGNYbdW+kBA==}
+
+  es-toolkit@1.39.10:
+    resolution: {integrity: sha512-E0iGnTtbDhkeczB0T+mxmoVlT4YNweEKBLq7oaU4p11mecdsZpNWOglI4895Vh4usbQ+LsJiuLuI2L0Vdmfm2w==}
 
   esbuild@0.21.5:
     resolution: {integrity: sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==}
@@ -3309,6 +3391,10 @@ packages:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
 
+  highlight.js@11.11.1:
+    resolution: {integrity: sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w==}
+    engines: {node: '>=12.0.0'}
+
   homedir-polyfill@1.0.3:
     resolution: {integrity: sha512-eSmmWE5bZTK2Nou4g0AI3zZ9rswp7GRKoKXS1BLUkvPviOqs4YTN1djQIqrXy9k5gEtdLPy86JjRwsNM9tnDcA==}
     engines: {node: '>=0.10.0'}
@@ -3561,6 +3647,10 @@ packages:
     resolution: {integrity: sha512-POQXvpdL69+CluYsillJ7SUhKvytYjW9vG/GKpnf+xP8UWgYEM/RaMzHHofbALDiKbbP1W8UEYmgGl39WkPZsg==}
     engines: {'0': node >= 0.2.0}
 
+  katex@0.16.22:
+    resolution: {integrity: sha512-XCHRdUw4lf3SKBaJe4EvgqIuWwkPSo9XoeO8GjQW94Bp7TWv9hNhzZjZ+OH9yf1UmLygb7DIT5GSFQiyt16zYg==}
+    hasBin: true
+
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
@@ -3603,6 +3693,9 @@ packages:
 
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
+
+  linkify-it@5.0.0:
+    resolution: {integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==}
 
   lint-staged@15.4.3:
     resolution: {integrity: sha512-FoH1vOeouNh1pw+90S+cnuoFwRfUD9ijY2GKy5h7HS3OR7JVir2N2xrsa0+Twc1B7cW72L+88geG5cW4wIhn7g==}
@@ -3703,6 +3796,13 @@ packages:
   mark.js@8.11.1:
     resolution: {integrity: sha512-1I+1qpDt4idfgLQG+BNWmrqku+7/2bi5nLf4YwF8y8zXvmfiTBY3PV3ZibfrjBueCByROpuBjLLFCajqkgYoLQ==}
 
+  markdown-it-emoji@3.0.0:
+    resolution: {integrity: sha512-+rUD93bXHubA4arpEZO3q80so0qgoFJEKRkRbjKX8RTdca89v2kfyF+xR3i2sQTwql9tpPZPOQN5B+PunspXRg==}
+
+  markdown-it@14.1.0:
+    resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
+    hasBin: true
+
   mathml-tag-names@2.1.3:
     resolution: {integrity: sha512-APMBEanjybaPzUrfqU0IMU5I0AswKMH7k8OTLs0vvV4KZpExkTkY87nR/zpbuTPj+gARop7aGUbl11pnDfW6xg==}
 
@@ -3714,6 +3814,9 @@ packages:
 
   mdn-data@2.15.0:
     resolution: {integrity: sha512-KIrS0lFPOqA4DgeO16vI5fkAsy8p++WBlbXtB5P1EQs8ubBgguAInNd1DnrCeTRfGchY0kgThgDOOIPyOLH2dQ==}
+
+  mdurl@2.0.0:
+    resolution: {integrity: sha512-Lf+9+2r+Tdp5wXDXC4PcIBjTDtq4UKjCPMQhKIuzpJNW0b96kVqSwW0bT7FhRSfmAiFYgP+SCRvdrDozfh0U5w==}
 
   meow@12.1.1:
     resolution: {integrity: sha512-BhXM0Au22RwUneMPwSCnyhTOizdWoIEPU9sp0Aqa1PnDMR5Wv2FGXYDjuzJEIX+Eo2Rb8xuYe5jrnm5QowQFkw==}
@@ -4077,6 +4180,10 @@ packages:
 
   property-information@6.5.0:
     resolution: {integrity: sha512-PgTgs/BlvHxOu8QuEN7wi5A0OmXaBcHpmCSTehcs6Uuu9IkDIEo13Hy7n898RHfrQ49vKCoGeWZSaAK01nwVig==}
+
+  punycode.js@2.3.1:
+    resolution: {integrity: sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA==}
+    engines: {node: '>=6'}
 
   punycode@2.3.1:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
@@ -4680,6 +4787,9 @@ packages:
     resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
     engines: {node: '>=14.17'}
     hasBin: true
+
+  uc.micro@2.1.0:
+    resolution: {integrity: sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A==}
 
   ufo@1.5.4:
     resolution: {integrity: sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ==}
@@ -6423,6 +6533,27 @@ snapshots:
       globby: 11.1.0
       read-yaml-file: 1.1.0
 
+  '@mdit/helper@0.22.1(markdown-it@14.1.0)':
+    dependencies:
+      '@types/markdown-it': 14.1.2
+    optionalDependencies:
+      markdown-it: 14.1.0
+
+  '@mdit/plugin-katex@0.23.1(markdown-it@14.1.0)':
+    dependencies:
+      '@mdit/helper': 0.22.1(markdown-it@14.1.0)
+      '@mdit/plugin-tex': 0.22.1(markdown-it@14.1.0)
+      '@types/markdown-it': 14.1.2
+      katex: 0.16.22
+    optionalDependencies:
+      markdown-it: 14.1.0
+
+  '@mdit/plugin-tex@0.22.1(markdown-it@14.1.0)':
+    dependencies:
+      '@types/markdown-it': 14.1.2
+    optionalDependencies:
+      markdown-it: 14.1.0
+
   '@microsoft/api-extractor-model@7.30.3(@types/node@22.13.4)':
     dependencies:
       '@microsoft/tsdoc': 0.15.1
@@ -6745,6 +6876,10 @@ snapshots:
   '@types/json-schema@7.0.15': {}
 
   '@types/linkify-it@5.0.0': {}
+
+  '@types/markdown-it-emoji@3.0.1':
+    dependencies:
+      '@types/markdown-it': 14.1.2
 
   '@types/markdown-it@14.1.2':
     dependencies:
@@ -7493,6 +7628,8 @@ snapshots:
 
   commander@2.20.3: {}
 
+  commander@8.3.0: {}
+
   compare-func@2.0.0:
     dependencies:
       array-ify: 1.0.0
@@ -7675,6 +7812,8 @@ snapshots:
   es-module-lexer@1.6.0: {}
 
   es-module-lexer@1.7.0: {}
+
+  es-toolkit@1.39.10: {}
 
   esbuild@0.21.5:
     optionalDependencies:
@@ -8201,6 +8340,8 @@ snapshots:
 
   he@1.2.0: {}
 
+  highlight.js@11.11.1: {}
+
   homedir-polyfill@1.0.3:
     dependencies:
       parse-passwd: 1.0.0
@@ -8386,6 +8527,10 @@ snapshots:
 
   jsonparse@1.3.1: {}
 
+  katex@0.16.22:
+    dependencies:
+      commander: 8.3.0
+
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
@@ -8424,6 +8569,10 @@ snapshots:
   lilconfig@3.1.3: {}
 
   lines-and-columns@1.2.4: {}
+
+  linkify-it@5.0.0:
+    dependencies:
+      uc.micro: 2.1.0
 
   lint-staged@15.4.3:
     dependencies:
@@ -8526,6 +8675,17 @@ snapshots:
 
   mark.js@8.11.1: {}
 
+  markdown-it-emoji@3.0.0: {}
+
+  markdown-it@14.1.0:
+    dependencies:
+      argparse: 2.0.1
+      entities: 4.5.0
+      linkify-it: 5.0.0
+      mdurl: 2.0.0
+      punycode.js: 2.3.1
+      uc.micro: 2.1.0
+
   mathml-tag-names@2.1.3: {}
 
   mdast-util-to-hast@13.2.0:
@@ -8543,6 +8703,8 @@ snapshots:
   mdn-data@2.12.2: {}
 
   mdn-data@2.15.0: {}
+
+  mdurl@2.0.0: {}
 
   meow@12.1.1: {}
 
@@ -8854,6 +9016,8 @@ snapshots:
   process-nextick-args@2.0.1: {}
 
   property-information@6.5.0: {}
+
+  punycode.js@2.3.1: {}
 
   punycode@2.3.1: {}
 
@@ -9486,6 +9650,8 @@ snapshots:
   typescript@5.7.2: {}
 
   typescript@5.7.3: {}
+
+  uc.micro@2.1.0: {}
 
   ufo@1.5.4: {}
 

@@ -37,7 +37,14 @@
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
-    "vue": "catalog:"
+    "vue": "catalog:",
+    "@mdit/plugin-katex": "catalog:",
+    "@types/markdown-it": "catalog:",
+    "@types/markdown-it-emoji": "catalog:",
+    "markdown-it": "catalog:",
+    "markdown-it-emoji": "catalog:",
+    "es-toolkit": "catalog:",
+    "highlight.js": "catalog:"
   },
   "peerDependencies": {
     "vue": "catalog:"

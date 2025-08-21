@@ -55,6 +55,7 @@
     "@useAgent/typescript-config": "workspace:*",
     "@useAgent/ui": "workspace:*",
     "@useAgent/utils": "workspace:*",
+    "@useAgent/markdown": "workspace:*",
     "eslint": "catalog:",
     "husky": "catalog:",
     "lint-staged": "catalog:",

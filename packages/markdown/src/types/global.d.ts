@@ -12,8 +12,7 @@
 declare module 'vue' {
   // GlobalComponents for Volar
   export interface GlobalComponents {
-    VButton: (typeof import('@useAgent/ui'))['VButton'];
-    VDialog: (typeof import('@useAgent/ui'))['VDialog'];
+    VMarkdownRenderer: (typeof import('@useAgent/markdown'))['VMarkdownRenderer'];
   }
 }
 

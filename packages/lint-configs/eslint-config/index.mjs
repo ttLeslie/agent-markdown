@@ -19,9 +19,10 @@ export default tseslint.config(
       'prefer-const': 'error', // 强制使用 const 而不是 let
       'sort-imports': ['error', { ignoreDeclarationSort: true }], // 强制排序导入语句，但忽略声明排序
       'no-duplicate-imports': 'error', // 禁止重复导入
-      'no-unused-vars': 'off',      // 禁用对未使用变量的检查（针对类型声明）
-      '@typescript-eslint/no-unused-vars': 'error',      // 改用 TypeScript 专属规则（更智能）
+      'no-unused-vars': 'off', // 禁用对未使用变量的检查（针对类型声明）
+      '@typescript-eslint/no-unused-vars': 'error', // 改用 TypeScript 专属规则（更智能）
       'no-var': 'error', // 禁止使用 var
+      'no-duplicate-imports': 'off',
     },
   },
 
