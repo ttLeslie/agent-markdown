@@ -8,6 +8,7 @@ import 'ant-design-vue/dist/reset.css';
 // 引入@useAgent/ui
 import MyLibUI from '@useAgent/ui';
 import '@useAgent/ui/style.css';
+import 'github-markdown-css';
 
 const app = createApp(App);
 app.use(Antd); // 全局引入antdv组件

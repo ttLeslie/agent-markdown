@@ -24,7 +24,8 @@
     "markdown-it": "catalog:",
     "markdown-it-emoji": "catalog:",
     "es-toolkit": "catalog:",
-    "highlight.js": "catalog:"
+    "highlight.js": "catalog:",
+    "github-markdown-css": "catalog:"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "catalog:",

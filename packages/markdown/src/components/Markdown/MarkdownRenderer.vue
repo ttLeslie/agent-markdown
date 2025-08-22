@@ -42,7 +42,7 @@ const MarkdownRenderer = defineComponent({
       return h(
         'div',
         {
-          class: 'markdown',
+          class: 'markdown-body',
           onClick: (e: MouseEvent) => {
             const target = e.target as HTMLElement;
             if (target.tagName === 'A') {
