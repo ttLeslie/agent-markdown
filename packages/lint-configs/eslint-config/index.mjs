@@ -23,6 +23,7 @@ export default tseslint.config(
       '@typescript-eslint/no-unused-vars': 'warn', // 改用 TypeScript 专属规则（更智能）
       'no-var': 'error', // 禁止使用 var
       'no-duplicate-imports': 'off',
+      'no-useless-escape': 'off',
     },
   },
 

@@ -99,14 +99,14 @@ export default function createVNode(
       return (
         handleSlot('image', slots, {
           src: getAttribute(imgNode, 'src'),
-          alt: getAttribute(imgNode, 'alt'),
+          alt: getAttribute(imgNode, 'alt') || node.content,
           title: getAttribute(imgNode, 'title'),
         }) ||
         h('img', {
           key: index,
           class: 'markdown-image',
           src: getAttribute(imgNode, 'src'),
-          alt: getAttribute(imgNode, 'alt'),
+          alt: getAttribute(imgNode, 'alt') || node.content,
           title: getAttribute(imgNode, 'title'),
         })
       );

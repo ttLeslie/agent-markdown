@@ -39,7 +39,7 @@ export const unescapeHtml = (str: string): string => {
 };
 
 export const stripOuterPTag = (html: string): string => {
-  let processed = html.replace(/^<p\b[^>]*>/i, '');
-  processed = processed.replace(/<\/p\s*>$/i, '');
+  let processed = html.replace(/^\s*<p\b[^>]*>\s*/i, '');
+  processed = processed.replace(/\s*<\/p\s*>\s*$/i, '');
   return processed.trim();
 };

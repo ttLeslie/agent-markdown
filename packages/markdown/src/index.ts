@@ -1,9 +1,9 @@
 import type { App } from 'vue';
-import { VMarkdownRenderer } from './components';
+import { AgentMarkdown } from './components';
 
 export { version } from './version';
 
-const components = [VMarkdownRenderer];
+const components = [AgentMarkdown];
 
 function install(app: App) {
   components.forEach((component) => {

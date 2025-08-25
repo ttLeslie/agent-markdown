@@ -12,7 +12,7 @@
 
     <!-- Markdown内容渲染 -->
     <div class="markdown-content">
-      <VMarkdownRenderer :content="content" @link-click="handleLinkClick">
+      <AgentMarkdown :content="content" @link-click="handleLinkClick">
         <!-- 1. 代码块相关插槽 -->
         <!-- 1.1 特定语言的代码块插槽（动态，如mermaid、javascript、vue等） -->
         <!-- <template #mermaid="{ rawCode }">
@@ -38,13 +38,13 @@
             <pre>{{ rawCode }}</pre>
           </div>
         </template>
-      </VMarkdownRenderer>
+      </AgentMarkdown>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { SUPPORTED_LANGUAGES, VMarkdownRenderer } from '@useAgent/markdown';
+import { AgentMarkdown, SUPPORTED_LANGUAGES } from '@useAgent/markdown';
 import hljs from 'highlight.js';
 import { onMounted, ref } from 'vue';
 const handleLinkClick = (href: string, title: string) => {
@@ -60,10 +60,10 @@ const fullContent = `
 ##### 五级标题
 ###### 六级标题
 
-**这是粗体文本**  
+**这是粗体文本**
 __这也是粗体文本__
 
-*这是斜体文本*  
+*这是斜体文本*
 _这也是斜体文本_
 
 ***这是粗斜体文本***
@@ -177,7 +177,7 @@ const setCodeStyle = (rawCode: string, lang: string) => {
   const language = SUPPORTED_LANGUAGES.includes(lang) ? lang : 'plaintext';
   try {
     return hljs.highlight(rawCode, { language }).value;
-  } catch (_) {
+  } catch (_e) {
     return hljs.highlight(rawCode, { language: 'plaintext' }).value;
   }
 };
@@ -215,7 +215,6 @@ onMounted(() => {
 }
 
 .start-btn {
-  color: white;
   background-color: #4caf50;
 }
 
@@ -225,7 +224,6 @@ onMounted(() => {
 }
 
 .restart-btn {
-  color: white;
   background-color: #2196f3;
 }
 
@@ -234,16 +232,19 @@ onMounted(() => {
   transform: translateY(-2px);
 }
 
+/* 原有样式保持不变 */
+span[aria-hidden='true'] {
+  display: none;
+}
+
 .code-content {
   padding: 1rem;
   overflow-x: auto;
-  background: #f5f5f5;
   border-radius: 4px;
 }
 
 .markdown-content {
   padding: 2rem;
-  background-color: white;
   border: 1px solid #eee;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgb(0 0 0 / 5%);
