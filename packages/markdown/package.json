@@ -44,7 +44,8 @@
     "markdown-it": "catalog:",
     "markdown-it-emoji": "catalog:",
     "es-toolkit": "catalog:",
-    "highlight.js": "catalog:"
+    "highlight.js": "catalog:",
+    "dompurify": "catalog:"
   },
   "peerDependencies": {
     "vue": "catalog:"

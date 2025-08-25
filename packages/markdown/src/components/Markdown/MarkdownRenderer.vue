@@ -13,15 +13,11 @@ const MarkdownRenderer = defineComponent({
     content: {
       type: String,
       default: '',
+      required: true,
     },
-    breaks: {
-      type: Boolean,
-      default: true,
-      required: false,
-    },
-    html: {
-      type: Boolean,
-      default: true,
+    mdOptions: {
+      type: Object as () => Options,
+      default: () => ({}),
       required: false,
     },
     href: {
@@ -29,15 +25,22 @@ const MarkdownRenderer = defineComponent({
       default: false,
       required: false,
     },
+    sanitize: {
+      type: Boolean,
+      default: false,
+      required: false,
+    },
   },
   setup(props, { emit, slots }) {
     return (): VNode => {
-      const mdIt = getMarkdownItInstance({ breaks: props.breaks, html: props.html });
+      const mdIt = getMarkdownItInstance(props.mdOptions);
       const tree = getCompontentTree(props.content, mdIt);
 
       const vNodes = tree.map((node, index) => {
-        return createVNode(node, index, mdIt, slots);
+        return createVNode(node, index, mdIt, slots, props.sanitize);
       });
+
+      console.log(tree);
 
       return h(
         'div',

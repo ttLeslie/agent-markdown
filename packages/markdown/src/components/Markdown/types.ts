@@ -1,4 +1,4 @@
-import type {Token} from 'markdown-it';
+import type { Token } from 'markdown-it';
 import type MarkdownIt from 'markdown-it';
 
 /**
@@ -17,6 +17,7 @@ export interface TagToken {
   close?: ExtendedToken;
   children: RendererToken[];
   ComponentType: string;
+  content?: string;
 }
 
 /**

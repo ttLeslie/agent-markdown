@@ -1,4 +1,4 @@
-import { Fragment, type Slots, type VNode, h } from 'vue';
+import { Fragment, type Slots, type VNode, defineAsyncComponent, h } from 'vue';
 import type { ExtendedToken, RendererToken, TagToken } from './types';
 import { escapeHtml, getAAttr, getAttribute, stripOuterPTag } from './utils';
 import type MarkdownIt from 'markdown-it';
@@ -7,11 +7,11 @@ const processChildren = (
   children: RendererToken[],
   mdIt: MarkdownIt,
   slots: Slots,
+  sanitize: boolean,
 ): (VNode | string)[] => {
-  return children.map((child, index) => createVNode(child, index, mdIt, slots)).filter(Boolean) as (
-    | VNode
-    | string
-  )[];
+  return children
+    .map((child, index) => createVNode(child, index, mdIt, slots, sanitize))
+    .filter(Boolean) as (VNode | string)[];
 };
 
 const handleSlot = (slotName: string, slots: Slots, props: Record<string, any>) => {
@@ -56,6 +56,7 @@ export default function createVNode(
   index: number,
   mdIt: MarkdownIt,
   slots: Slots,
+  sanitize: boolean,
 ): VNode | string | null {
   const { ComponentType } = node;
 
@@ -88,7 +89,7 @@ export default function createVNode(
       return h('br', { key: index });
 
     case 'inline': {
-      const children = processChildren((node as TagToken).children, mdIt, slots);
+      const children = processChildren((node as TagToken).children, mdIt, slots, sanitize);
       return h(Fragment, { key: index }, children);
     }
 
@@ -111,12 +112,113 @@ export default function createVNode(
       );
     }
 
-    case 'html_block':
+    case 'html_inline': {
+      const tagNode = node as TagToken;
+      let content = tagNode.content || '';
+      let tagNames: string = '';
+      const tagAttrs: Array<{ [key: string]: string }> = [];
+
+      const inlineTags = [
+        'span',
+        'a',
+        'strong',
+        'em',
+        'br',
+        'img',
+        'input',
+        'label',
+        'code',
+        'mark',
+        'small',
+        'sup',
+        'sub',
+        'q',
+      ];
+
+      const tagPattern = new RegExp(
+        `<((${inlineTags.join('|')}))\\b([^>]*?)>(.*?)</\\2>|<((${inlineTags.join('|')}))\\b([^/]*/?)>`,
+        'gi',
+      );
+
+      content = content.replace(
+        tagPattern,
+        (_match, _p1, p2, attrs, innerContent, _p3, p4, selfClosingAttrs) => {
+          const tagName = p2 || p4;
+          const attributes = attrs || selfClosingAttrs || '';
+
+          if (tagName) {
+            // 解析属性
+            const attrMap: { [key: string]: string } = {};
+            const attrRegex = /(\w+)\s*=\s*["']([^"']*)["']/g;
+            let attrMatch;
+
+            while ((attrMatch = attrRegex.exec(attributes)) !== null) {
+              attrMap[attrMatch[1]] = attrMatch[2];
+            }
+
+            tagNames = tagName;
+            tagAttrs.push(attrMap);
+          }
+
+          return innerContent || '';
+        },
+      );
+
+      const slotParams = {
+        originalContent: tagNode.content || '',
+        content: content,
+        tags: tagNames,
+        attrs: tagAttrs,
+      };
+
+      if (tagNames && tagNode.content) {
+        const slotResult = handleSlot('htmlInline', slots, slotParams);
+        if (slotResult) {
+          return slotResult;
+        } else {
+          return '';
+        }
+      } else {
+        return '';
+      }
+    }
+
+    case 'html_block': {
+      if (sanitize) {
+        const sanitizeHtml = async (html: string) => {
+          try {
+            const module = await import('dompurify');
+            return module.default.sanitize(html) ?? '';
+          } catch (error) {
+            console.error('Failed to sanitize HTML:', error);
+            return html;
+          }
+        };
+        const content = (node as ExtendedToken).content || '';
+
+        return (
+          handleSlot('htmlBlock', slots, { content }) ||
+          h(
+            defineAsyncComponent(() =>
+              sanitizeHtml(content).then((purifiedHtml) =>
+                h('div', { key: index, innerHTML: purifiedHtml, class: 'markdown-html-block' }),
+              ),
+            ),
+          )
+        );
+      }
+
       return (
         handleSlot('htmlBlock', slots, {
           content: (node as ExtendedToken).content,
-        }) || h('div', { key: index, innerHTML: (node as ExtendedToken).content || '' })
+        }) ||
+        h('div', {
+          key: index,
+          class: 'markdown-html-block',
+          innerHTML: (node as ExtendedToken).content || '',
+        })
       );
+    }
 
     case 'code_inline':
       return (
@@ -183,7 +285,7 @@ export default function createVNode(
     case 'default': {
       const tagNode = node as TagToken;
       const { tag, children } = tagNode;
-      const childNodes = processChildren(children, mdIt, slots);
+      const childNodes = processChildren(children, mdIt, slots, sanitize);
       const baseProps: Record<string, string | number> = { key: index };
 
       baseProps.class = `markdown-${tag}`;

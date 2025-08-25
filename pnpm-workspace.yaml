@@ -61,3 +61,4 @@ catalog:
   '@types/markdown-it': '^14.1.2'
   '@types/markdown-it-emoji': '^3.0.1'
   'github-markdown-css': '^5.8.1'
+  'dompurify': '^3.2.6'
