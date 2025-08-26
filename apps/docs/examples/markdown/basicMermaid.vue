@@ -20,7 +20,6 @@
 import { AgentMarkdown } from '@useAgent/markdown';
 import MermaidComponent from '../component/MermaidComponent.vue';
 const content = `
-## mermaid 图表
 
 \`\`\`mermaid
 pie

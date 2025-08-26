@@ -15,8 +15,3 @@ const content = `
 :kissing_closed_eyes:	 :flushed:	 :relieved:
 `;
 </script>
-<style scoped>
-.markdown-body {
-  font-size: 16px;
-}
-</style>

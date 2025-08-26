@@ -40,8 +40,6 @@ const MarkdownRenderer = defineComponent({
         return createVNode(node, index, mdIt, slots, props.sanitize);
       });
 
-      console.log(tree);
-
       return h(
         'div',
         {
@@ -50,7 +48,7 @@ const MarkdownRenderer = defineComponent({
             const target = e.target as HTMLElement;
             if (target.tagName === 'A') {
               const anchor = target as HTMLAnchorElement;
-              emit('link-click', anchor.dataset.href, anchor.title);
+              emit('link-click', e, anchor.dataset.href, anchor.title);
             }
           },
         },

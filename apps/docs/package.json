@@ -24,6 +24,7 @@
     "sass": "catalog:",
     "typescript": "catalog:",
     "vitepress": "catalog:",
-    "vitepress-demo-plugin": "catalog:"
+    "vitepress-demo-plugin": "catalog:",
+    "mermaid": "catalog:"
   }
 }

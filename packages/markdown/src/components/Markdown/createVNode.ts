@@ -184,6 +184,85 @@ export default function createVNode(
     }
 
     case 'html_block': {
+      const tagNode = node as TagToken;
+      let content = tagNode.content || '';
+      let tagNames: string = '';
+      const tagAttrs: Array<{ [key: string]: string }> = [];
+      const blockTags = [
+        'div',
+        'p',
+        'blockquote',
+        'ul',
+        'ol',
+        'li',
+        'h1',
+        'h2',
+        'h3',
+        'h4',
+        'h5',
+        'h6',
+        'pre',
+        'code',
+        'table',
+        'thead',
+        'tbody',
+        'tr',
+        'td',
+        'th',
+        'section',
+        'article',
+        'header',
+        'footer',
+        'nav',
+        'aside',
+        'figure',
+        'figcaption',
+        'hr',
+        'form',
+        'fieldset',
+      ];
+
+      const tagPattern = new RegExp(
+        `<((${blockTags.join('|')}))\\b([^>]*?)>([\\s\\S]*?)</\\2>|<((${blockTags.join('|')}))\\b([^/]*/?)>`,
+        'gi',
+      );
+
+      content = content.replace(
+        tagPattern,
+        (_match, _p1, p2, attrs, innerContent, _p3, p4, selfClosingAttrs) => {
+          const tagName = p2 || p4;
+          const attributes = attrs || selfClosingAttrs || '';
+
+          if (tagName) {
+            // 提取标签属性
+            const attrMap: { [key: string]: string } = {};
+            const attrRegex = /(\w+)\s*=\s*["']([^"']*)["']/g;
+            let attrMatch;
+
+            while ((attrMatch = attrRegex.exec(attributes)) !== null) {
+              attrMap[attrMatch[1]] = attrMatch[2];
+            }
+
+            tagNames = tagNames ? `${tagNames},${tagName}` : tagName;
+            tagAttrs.push(attrMap);
+          }
+
+          return innerContent || '';
+        },
+      );
+
+      const slotParams = {
+        originalContent: tagNode.content || '',
+        content: content,
+        tags: tagNames,
+        attrs: tagAttrs,
+      };
+
+      const slotResult = handleSlot('htmlBlock', slots, slotParams);
+      if (slotResult) {
+        return slotResult;
+      }
+
       if (sanitize) {
         const sanitizeHtml = async (html: string) => {
           try {
@@ -194,30 +273,25 @@ export default function createVNode(
             return html;
           }
         };
-        const content = (node as ExtendedToken).content || '';
 
-        return (
-          handleSlot('htmlBlock', slots, { content }) ||
-          h(
-            defineAsyncComponent(() =>
-              sanitizeHtml(content).then((purifiedHtml) =>
-                h('div', { key: index, innerHTML: purifiedHtml, class: 'markdown-html-block' }),
-              ),
+        return h(
+          defineAsyncComponent(() =>
+            sanitizeHtml(tagNode.content || '').then((purifiedHtml) =>
+              h('div', {
+                key: index,
+                innerHTML: purifiedHtml,
+                class: 'markdown-html-block',
+              }),
             ),
-          )
+          ),
         );
       }
 
-      return (
-        handleSlot('htmlBlock', slots, {
-          content: (node as ExtendedToken).content,
-        }) ||
-        h('div', {
-          key: index,
-          class: 'markdown-html-block',
-          innerHTML: (node as ExtendedToken).content || '',
-        })
-      );
+      return h('div', {
+        key: index,
+        class: 'markdown-html-block',
+        innerHTML: tagNode.content || '',
+      });
     }
 
     case 'code_inline':
