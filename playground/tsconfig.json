@@ -16,8 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "~/*": ["../packages/ui/src/*"],
-      "~/@useAgent/ui": ["../packages/ui/src/index.ts"]
+      "~/*": ["../packages/markdown/src/*"],
+      "~/@useAgent/markdown": ["../packages/markdown/src/index.ts"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]

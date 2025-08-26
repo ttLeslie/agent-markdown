@@ -13,11 +13,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@useAgent/directives": "workspace:*",
-    "@useAgent/hooks": "workspace:*",
     "@useAgent/typescript-config": "workspace:*",
-    "@useAgent/ui": "workspace:*",
-    "@useAgent/utils": "workspace:*",
+    "@useAgent/markdown": "workspace:*",
     "vue": "catalog:"
   },
   "devDependencies": {

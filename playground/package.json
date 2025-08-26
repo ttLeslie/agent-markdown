@@ -13,7 +13,6 @@
     "@useAgent/directives": "workspace:*",
     "@useAgent/hooks": "workspace:*",
     "@useAgent/typescript-config": "workspace:*",
-    "@useAgent/ui": "workspace:*",
     "@useAgent/utils": "workspace:*",
     "ant-design-vue": "catalog:",
     "vue": "catalog:",
