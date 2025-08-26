@@ -4,8 +4,6 @@
 
 ## 基础用法
 
-<demo vue="ui/button/basic.vue" />
-
 ## API
 
 ### Props

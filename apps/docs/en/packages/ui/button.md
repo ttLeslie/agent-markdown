@@ -4,8 +4,6 @@ Basic button component.
 
 ## Basic Usage
 
-<demo vue="ui/button/basic.vue" />
-
 ## API
 
 ### Props

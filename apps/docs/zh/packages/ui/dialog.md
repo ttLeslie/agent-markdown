@@ -4,8 +4,6 @@
 
 ## 基础用法
 
-<demo vue="ui/dialog/basic.vue" />
-
 ## API
 
 ### Props

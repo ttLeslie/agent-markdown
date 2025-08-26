@@ -4,8 +4,6 @@ Basic dialog component.
 
 ## Basic Usage
 
-<demo vue="ui/dialog/basic.vue" />
-
 ## API
 
 ### Props
