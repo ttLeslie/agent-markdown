@@ -36,7 +36,7 @@ import { routes } from '@/router';
 import type { MenuProps } from 'ant-design-vue';
 
 const collapsed = ref<boolean>(false);
-const selectedKeys = ref<string[]>(['/ui']);
+const selectedKeys = ref<string[]>(['/markdown']);
 const router = useRouter();
 
 const pageTitle = computed(() => {
