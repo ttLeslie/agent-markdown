@@ -10,10 +10,8 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "catalog:",
-    "@useAgent/directives": "workspace:*",
-    "@useAgent/hooks": "workspace:*",
+    "@useAgent/markdown": "workspace:*",
     "@useAgent/typescript-config": "workspace:*",
-    "@useAgent/utils": "workspace:*",
     "ant-design-vue": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:",

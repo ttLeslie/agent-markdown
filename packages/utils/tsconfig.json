@@ -1,8 +1,0 @@
-{
-  "extends": "@useAgent/typescript-config/base.json",
-  "include": ["src/**/*.ts", "src/**/*.d.ts"],
-  "compilerOptions": {
-    "target": "ESNext",
-    "lib": ["ESNext", "DOM"]
-  }
-}
