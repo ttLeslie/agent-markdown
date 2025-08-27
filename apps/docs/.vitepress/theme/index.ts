@@ -3,6 +3,7 @@ import DefaultTheme from 'vitepress/theme';
 // import { useGlobalComp } from '../utils/useGlobalComp';
 // 自定义样式重载
 import './styles/global.css';
+import '@useAgent/markdown/style.css';
 
 export default {
   extends: DefaultTheme,
