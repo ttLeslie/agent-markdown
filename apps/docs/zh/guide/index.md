@@ -24,6 +24,17 @@ bun add AgentMarkdown -D
 
 :::
 
+## 引入组件
+
+```ts
+// main.ts
+import { AgentMarkdown } from 'AgentMarkdown';
+import 'AgentMarkdown/style.css';
+
+// 全局注册
+app.component('AgentMarkdown', AgentMarkdown);
+```
+
 ## 基本用法
 
 基础用法中，组件会默认渲染所有标准 `markdown` 语法，包括标题、文本样式、列表、链接、图片、表格、代码块、公式等。
