@@ -23,7 +23,7 @@ catalog:
   'rollup-plugin-dts': ^6.1.1
   'rollup-plugin-esbuild': 6.2.0
   'vitepress': ^1.6.3
-  'vitepress-demo-plugin': ^1.2.3
+  'vitepress-demo-plugin': ^1.4.7
   '@babel/preset-env': ^7.26.9
   '@rollup/plugin-alias': ^5.1.1
   '@rollup/plugin-babel': ^6.0.4

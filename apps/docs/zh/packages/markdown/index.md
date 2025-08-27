@@ -1,12 +1,12 @@
 # markdown组件
 
-> 这是一个基于markdownIt的 Vu3组件, 用于渲染markdown内容，可以进行增量渲染&交互式组件实现
+这是一个基于markdownIt的 Vu3组件, 用于渲染markdown内容。
 
 ## 基本用法
 
-基础用法中，组件会默认渲染所有标准 markdown 语法，包括标题、文本样式、列表、链接、图片、表格、代码块、公式等。
+基础用法中，组件会默认渲染所有标准 `markdown` 语法，包括标题、文本样式、列表、链接、图片、表格、代码块、公式等。
 
-<demo vue="markdown/basic.vue" />
+<demo vue="markdown/basic.vue" :vueFiles="{'demo': 'markdown/exbasic.vue'}"  />
 
 ## 自定义通用的代码块
 

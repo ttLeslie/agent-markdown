@@ -169,8 +169,8 @@ catalogs:
       specifier: ^1.6.3
       version: 1.6.3
     vitepress-demo-plugin:
-      specifier: ^1.2.3
-      version: 1.2.3
+      specifier: ^1.4.7
+      version: 1.4.7
     vitest:
       specifier: ^3.0.5
       version: 3.0.5
@@ -194,15 +194,9 @@ importers:
       '@useAgent/commitlint-config':
         specifier: workspace:*
         version: link:packages/lint-configs/commitlint-config
-      '@useAgent/directives':
-        specifier: workspace:*
-        version: link:packages/directives
       '@useAgent/eslint-config':
         specifier: workspace:*
         version: link:packages/lint-configs/eslint-config
-      '@useAgent/hooks':
-        specifier: workspace:*
-        version: link:packages/hooks
       '@useAgent/markdown':
         specifier: workspace:*
         version: link:packages/markdown
@@ -215,12 +209,6 @@ importers:
       '@useAgent/typescript-config':
         specifier: workspace:*
         version: link:packages/lint-configs/typescript-config
-      '@useAgent/ui':
-        specifier: workspace:*
-        version: link:packages/ui
-      '@useAgent/utils':
-        specifier: workspace:*
-        version: link:packages/utils
       eslint:
         specifier: 'catalog:'
         version: 9.20.1(jiti@2.4.2)
@@ -254,21 +242,12 @@ importers:
 
   apps/docs:
     dependencies:
-      '@useAgent/directives':
+      '@useAgent/markdown':
         specifier: workspace:*
-        version: link:../../packages/directives
-      '@useAgent/hooks':
-        specifier: workspace:*
-        version: link:../../packages/hooks
+        version: link:../../packages/markdown
       '@useAgent/typescript-config':
         specifier: workspace:*
         version: link:../../packages/lint-configs/typescript-config
-      '@useAgent/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
-      '@useAgent/utils':
-        specifier: workspace:*
-        version: link:../../packages/utils
       vue:
         specifier: 'catalog:'
         version: 3.5.13(typescript@5.7.3)
@@ -287,7 +266,7 @@ importers:
         version: 1.6.3(@algolia/client-search@5.20.2)(@types/node@24.1.0)(async-validator@4.2.5)(postcss@8.5.2)(sass@1.85.0)(terser@5.39.0)(typescript@5.7.3)
       vitepress-demo-plugin:
         specifier: 'catalog:'
-        version: 1.2.3(vitepress@1.6.3(@algolia/client-search@5.20.2)(@types/node@24.1.0)(async-validator@4.2.5)(postcss@8.5.2)(sass@1.85.0)(terser@5.39.0)(typescript@5.7.3))(vue@3.5.13(typescript@5.7.3))
+        version: 1.4.7(shiki@2.4.1)(vitepress@1.6.3(@algolia/client-search@5.20.2)(@types/node@24.1.0)(async-validator@4.2.5)(postcss@8.5.2)(sass@1.85.0)(terser@5.39.0)(typescript@5.7.3))(vue@3.5.13(typescript@5.7.3))
 
   build:
     devDependencies:
@@ -336,51 +315,6 @@ importers:
       rollup-plugin-scss:
         specifier: 'catalog:'
         version: 4.0.1
-
-  packages/directives:
-    devDependencies:
-      '@rollup/plugin-json':
-        specifier: 'catalog:'
-        version: 6.1.0(rollup@4.34.7)
-      '@rollup/plugin-terser':
-        specifier: 'catalog:'
-        version: 0.4.4(rollup@4.34.7)
-      '@useAgent/typescript-config':
-        specifier: workspace:*
-        version: link:../lint-configs/typescript-config
-      rollup:
-        specifier: 'catalog:'
-        version: 4.34.7
-      rollup-plugin-dts:
-        specifier: 'catalog:'
-        version: 6.1.1(rollup@4.34.7)(typescript@5.7.3)
-      rollup-plugin-esbuild:
-        specifier: 'catalog:'
-        version: 6.2.0(esbuild@0.24.2)(rollup@4.34.7)
-      vue:
-        specifier: 'catalog:'
-        version: 3.5.13(typescript@5.7.3)
-
-  packages/hooks:
-    devDependencies:
-      '@rollup/plugin-json':
-        specifier: 'catalog:'
-        version: 6.1.0(rollup@4.34.7)
-      '@useAgent/typescript-config':
-        specifier: workspace:*
-        version: link:../lint-configs/typescript-config
-      rollup:
-        specifier: 'catalog:'
-        version: 4.34.7
-      rollup-plugin-dts:
-        specifier: 'catalog:'
-        version: 6.1.1(rollup@4.34.7)(typescript@5.7.3)
-      rollup-plugin-esbuild:
-        specifier: 'catalog:'
-        version: 6.2.0(esbuild@0.24.2)(rollup@4.34.7)
-      vue:
-        specifier: 'catalog:'
-        version: 3.5.13(typescript@5.7.3)
 
   packages/lint-configs/commitlint-config:
     devDependencies:
@@ -523,54 +457,6 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4(@types/node@24.1.0)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0)
 
-  packages/ui:
-    devDependencies:
-      '@types/node':
-        specifier: 'catalog:'
-        version: 22.13.4
-      '@useAgent/typescript-config':
-        specifier: workspace:*
-        version: link:../lint-configs/typescript-config
-      '@vitejs/plugin-vue':
-        specifier: 'catalog:'
-        version: 5.2.1(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
-      '@vitejs/plugin-vue-jsx':
-        specifier: 'catalog:'
-        version: 4.1.1(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
-      sass:
-        specifier: 'catalog:'
-        version: 1.85.0
-      typescript:
-        specifier: 'catalog:'
-        version: 5.7.3
-      vite:
-        specifier: 'catalog:'
-        version: 6.1.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0)
-      vite-plugin-dts:
-        specifier: 'catalog:'
-        version: 4.5.0(@types/node@22.13.4)(rollup@4.34.7)(typescript@5.7.3)(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))
-      vue:
-        specifier: 'catalog:'
-        version: 3.5.13(typescript@5.7.3)
-
-  packages/utils:
-    devDependencies:
-      '@rollup/plugin-json':
-        specifier: 'catalog:'
-        version: 6.1.0(rollup@4.34.7)
-      '@useAgent/typescript-config':
-        specifier: workspace:*
-        version: link:../lint-configs/typescript-config
-      rollup:
-        specifier: 'catalog:'
-        version: 4.34.7
-      rollup-plugin-dts:
-        specifier: 'catalog:'
-        version: 6.1.1(rollup@4.34.7)(typescript@5.7.3)
-      rollup-plugin-esbuild:
-        specifier: 'catalog:'
-        version: 6.2.0(esbuild@0.24.2)(rollup@4.34.7)
-
   playground:
     dependencies:
       '@ant-design/icons-vue':
@@ -585,21 +471,12 @@ importers:
       '@types/markdown-it-emoji':
         specifier: 'catalog:'
         version: 3.0.1
-      '@useAgent/directives':
+      '@useAgent/markdown':
         specifier: workspace:*
-        version: link:../packages/directives
-      '@useAgent/hooks':
-        specifier: workspace:*
-        version: link:../packages/hooks
+        version: link:../packages/markdown
       '@useAgent/typescript-config':
         specifier: workspace:*
         version: link:../packages/lint-configs/typescript-config
-      '@useAgent/ui':
-        specifier: workspace:*
-        version: link:../packages/ui
-      '@useAgent/utils':
-        specifier: workspace:*
-        version: link:../packages/utils
       ant-design-vue:
         specifier: 'catalog:'
         version: 4.2.6(vue@3.5.13(typescript@5.7.3))
@@ -5433,9 +5310,10 @@ packages:
       yaml:
         optional: true
 
-  vitepress-demo-plugin@1.2.3:
-    resolution: {integrity: sha512-OkOJwp11hhjSN3CFvJpKAKISRsc1id9GjJy70LPNuEezmDBDgeBqBqmvsECEbIfnq9t4TUWaWXrcZZ9twtdJvQ==}
+  vitepress-demo-plugin@1.4.7:
+    resolution: {integrity: sha512-Au2uh8qvGcuX7WZgJGA7RkWEO387LxyAFsZ6Dm4KU0TE38FMvTVRdXg3FJDH5lT7tivcEZAzdjOA26chm98t1w==}
     peerDependencies:
+      shiki: '*'
       vitepress: '*'
       vue: ^3.2.0
 
@@ -10823,8 +10701,9 @@ snapshots:
       terser: 5.39.0
       yaml: 2.7.0
 
-  vitepress-demo-plugin@1.2.3(vitepress@1.6.3(@algolia/client-search@5.20.2)(@types/node@24.1.0)(async-validator@4.2.5)(postcss@8.5.2)(sass@1.85.0)(terser@5.39.0)(typescript@5.7.3))(vue@3.5.13(typescript@5.7.3)):
+  vitepress-demo-plugin@1.4.7(shiki@2.4.1)(vitepress@1.6.3(@algolia/client-search@5.20.2)(@types/node@24.1.0)(async-validator@4.2.5)(postcss@8.5.2)(sass@1.85.0)(terser@5.39.0)(typescript@5.7.3))(vue@3.5.13(typescript@5.7.3)):
     dependencies:
+      shiki: 2.4.1
       vitepress: 1.6.3(@algolia/client-search@5.20.2)(@types/node@24.1.0)(async-validator@4.2.5)(postcss@8.5.2)(sass@1.85.0)(terser@5.39.0)(typescript@5.7.3)
       vue: 3.5.13(typescript@5.7.3)
 

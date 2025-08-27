@@ -1,12 +1,7 @@
+<!-- basicBlock.vue -->
 <template>
-  <AgentMarkdown
-    :content="content"
-    :md-options="{
-      breaks: true,
-      html: true,
-    }"
-    :sanitize="true"
-  >
+  <!-- 保持原有模板不变 -->
+  <AgentMarkdown :content="content" :md-options="{ breaks: true, html: true }" :sanitize="true">
     <template #htmlBlock="{ tags, attrs }">
       <div v-if="tags === 'div' && attrs[0].type === 'code'" class="code-block">
         <div class="top">{{ attrs[0].title }}</div>
@@ -17,8 +12,8 @@
 </template>
 
 <script setup lang="ts">
+// 保持原有脚本不变
 import { AgentMarkdown } from '@useAgent/markdown';
-
 const content = `
 根据你的要求，我调整了代码结构：
 <div data-type="code" data-title="javascript快速排序的示例" data-time="2023-08-01" data-content="function quickSort(arr) {
@@ -41,6 +36,7 @@ const content = `
 </script>
 
 <style scoped>
+/* 基础样式（亮色模式） */
 .code-block {
   display: flex;
   flex-direction: column;
@@ -50,23 +46,42 @@ const content = `
   background: linear-gradient(109deg, #fff 45.34%, #f7f3ff 102.43%);
   border: 1px solid #0000000f;
   border-radius: 4px;
-  transition: all 0.3s ease; /* 过渡动画 */
+  transition: all 0.3s ease;
 }
 
-/* 悬停效果 */
 .code-block:hover {
-  border-color: #d8c3fa; /* 边框颜色变化 */
-  box-shadow: 0 4px 12px rgb(156 39 176 / 8%); /* 紫色系阴影 */
-  transform: translateY(-2px); /* 轻微上浮 */
+  border-color: #d8c3fa;
+  box-shadow: 0 4px 12px rgb(156 39 176 / 8%);
+  transform: translateY(-2px);
 }
 
 .code-block .top {
-  margin-bottom: 8px; /* 增加与底部的间距 */
+  margin-bottom: 8px;
+  color: #333;
 }
 
 .code-block .bottom {
-  margin-top: auto; /* 推到底部 */
+  margin-top: auto;
   font-size: 12px;
   color: rgb(0 0 0 / 30%);
+}
+
+/* 暗黑模式样式 */
+html.dark .code-block {
+  background: #2d2d2d; /* 深色背景 */
+  border: 1px solid #444; /* 深色边框 */
+}
+
+html.dark .code-block .top {
+  color: #e0e0e0; /* 浅色标题 */
+}
+
+html.dark .code-block .bottom {
+  color: rgb(255 255 255 / 50%); /* 浅色辅助文字 */
+}
+
+html.dark .code-block:hover {
+  border-color: #6b46c1; /* 深色下的高亮边框 */
+  box-shadow: 0 4px 12px rgb(107 70 193 / 20%); /* 深色阴影 */
 }
 </style>
