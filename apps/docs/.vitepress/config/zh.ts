@@ -2,29 +2,29 @@ import { defineConfig } from 'vitepress';
 
 export const zh = defineConfig({
   lang: 'zh-Hans',
-  title: '组件库模板文档',
-  description: '一个基于 Vue3 的组件库和工具集',
+  title: 'useAgent文档',
+  description: '一个基于 Vue3 专注于大模型前端应用场景的解决方案',
   themeConfig: {
     logo: '/logo.png',
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: '首页', link: '/' },
-      // { text: '其他', link: '/markdown-examples' },
-      { text: '博客', link: 'https://huangmingfu.github.io/my-blog' },
-      {
-        text: '更多',
-        items: [
-          {
-            text: '更新日志',
-            link: 'https://github.com/huangmingfu/vue3-turbo-component-lib-template/blob/master/CHANGELOG.md',
-          },
-          // {
-          //   text: '参与贡献',
-          //   link: '',
-          // },
-        ],
-      },
-    ],
+    // nav: [
+    // { text: '首页', link: '/' },
+    // { text: '其他', link: '/markdown-examples' },
+    // { text: '博客', link: 'https://huangmingfu.github.io/my-blog' },
+    // {
+    //   text: '更多',
+    //   items: [
+    //     {
+    //       text: '更新日志',
+    //       link: 'https://github.com/huangmingfu/vue3-turbo-component-lib-template/blob/master/CHANGELOG.md',
+    //     },
+    //     {
+    //       text: '参与贡献',
+    //       link: '',
+    //     },
+    //   ],
+    // },
+    // ],
     sidebar: [
       {
         text: '快速开始',

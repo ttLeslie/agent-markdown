@@ -5,6 +5,7 @@
       <div class="custom-code-block">
         <div class="code-block-header">
           <span class="code-block-lang">{{ lang }}</span>
+          <button class="copy-btn">复制</button>
         </div>
         <pre><code class="language-{{ lang }}">{{ rawCode }}</code></pre>
       </div>
@@ -31,6 +32,8 @@ const code = "useAgent/markdown";
 }
 
 .code-block-header {
+  display: flex;
+  justify-content: space-between;
   padding: 10px;
   background-color: #00000014;
 }
