@@ -1,9 +1,9 @@
 ---
 layout: home
 hero:
-  name: useAgent
-  text: 大模型应用解决方案
-  tagline: 易上手、高拓展和企业级的 Vue3 前端接入大模型最佳实践方案，帮助前端开发者快速搭建企业级大模型应用。
+  name: AgentMarkdown
+  text: LLM应用渲染组件
+  tagline: 基于markdown-It的 vue3组件，帮助开发者快速搭建企业级大模型应用。
   image:
     src: /logo.png
     alt: useAgent
@@ -16,10 +16,13 @@ hero:
       link: https://github.com/huangmingfu/vue3-turbo-component-lib-template
 
 features:
-  - icon: 🌈
-    title: Markdown组件
-    details: 极致性能、高拓展和 Web安全。
+  - icon: ⚡️
+    title: 极致渲染性能
+    details: 基于Markdown文本生成VNode，实现增量渲染，大文本场景无卡顿
   - icon: 🔧
-    title: 流式请求工具库
-    details: 开箱即用、全链路错误捕获和监控
+    title: 高灵活拓展
+    details: 覆盖全场景插槽：自定义代码块（含mermaid）、行内/块级交互组件、图片等
+  - icon: 🛡️
+    title: 企业级安全
+    details: 内置XSS防护，支持sanitize模式（依赖dompurify），渲染用户内容更安心
 ---

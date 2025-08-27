@@ -1,12 +1,5 @@
 # 快速开始
 
-## 介绍
-
-useAgent 是一个基于 Vue3 的大模型应用前端解决方案，提供了以下两个部分：
-
-- Markdown 组件
-- 流式请求工具库
-
 ## 安装
 
 使用包管理器安装：
@@ -14,33 +7,27 @@ useAgent 是一个基于 Vue3 的大模型应用前端解决方案，提供了�
 ::: code-group
 
 ```bash [npm]
-npm install @useAgent/markdown @useAgent/stream
+npm install AgentMarkdown -D
 ```
 
 ```bash [yarn]
-yarn add @useAgent/markdown @useAgent/stream
+yarn add AgentMarkdown -D
 ```
 
 ```bash [pnpm]
-pnpm add @useAgent/markdown @useAgent/stream
+pnpm add AgentMarkdown -D
 ```
 
 ```bash [bun]
-bun add @useAgent/markdown @useAgent/stream
+bun add AgentMarkdown -D
 ```
 
 :::
 
 ## 使用
 
-### 流式请求工具库
-
-```ts
-import { StreamFetchClient } from '@useAgent/stream';
-```
-
 ### Markdown 组件
 
 ```ts
-import { AgentMarkdown } from '@useAgent/markdown';
+import { AgentMarkdown } from 'AgentMarkdown';
 ```

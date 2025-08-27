@@ -404,6 +404,9 @@ importers:
       es-toolkit:
         specifier: 'catalog:'
         version: 1.39.10
+      github-markdown-css:
+        specifier: 'catalog:'
+        version: 5.8.1
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1

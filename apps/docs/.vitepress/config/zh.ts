@@ -27,17 +27,17 @@ export const zh = defineConfig({
     // ],
     sidebar: [
       {
-        text: '快速开始',
-        items: [{ text: '介绍', link: '/guide/index' }],
+        text: '指南',
+        items: [{ text: '快速开始', link: '/guide/index' }],
       },
-      {
-        text: '@useAgent/markdown',
-        items: [{ text: 'Markdown', link: '/packages/markdown/index' }],
-      },
-      {
-        text: '@useAgent/stream',
-        items: [{ text: '发送流式请求', link: '/packages/stream/index' }],
-      },
+      // {
+      //   text: '@useAgent/markdown',
+      //   items: [{ text: 'Markdown', link: '/packages/markdown/index' }],
+      // },
+      // {
+      //   text: '@useAgent/stream',
+      //   items: [{ text: '发送流式请求', link: '/packages/stream/index' }],
+      // },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/huangmingfu/vue3-turbo-component-lib-template' },
