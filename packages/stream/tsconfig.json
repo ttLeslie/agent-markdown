@@ -1,5 +1,5 @@
 {
-  "extends": "@useAgent/typescript-config/base.json",
+  "extends": "@AgentMarkdown/typescript-config/base.json",
   "include": ["src/**/*.ts", "src/**/*.d.ts"],
   "compilerOptions": {
     "target": "ESNext",

@@ -32,11 +32,11 @@ export const en = defineConfig({
         items: [{ text: 'Introduction', link: 'en/guide/index' }],
       },
       {
-        text: '@useAgent/markdown',
+        text: '@AgentMarkdown/markdown',
         items: [{ text: 'Markdown', link: 'en/packages/markdown/index' }],
       },
       {
-        text: '@useAgent/stream',
+        text: '@AgentMarkdown/stream',
         items: [{ text: 'Streaming Requests', link: 'en/packages/stream/index' }],
       },
     ],

@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { AgentMarkdown } from '@useAgent/markdown';
+import { AgentMarkdown } from '@AgentMarkdown/markdown';
 const content = `
 \`\`\`javascript
 const code = "useAgent/markdown";

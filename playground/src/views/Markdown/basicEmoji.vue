@@ -6,7 +6,7 @@
   </AgentMarkdown>
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '@useAgent/markdown';
+import { AgentMarkdown } from '@AgentMarkdown/markdown';
 
 const content = `
 :smile: :laughing: :kissing:

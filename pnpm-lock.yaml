@@ -185,30 +185,30 @@ importers:
 
   .:
     devDependencies:
+      '@AgentMarkdown/commitlint-config':
+        specifier: workspace:*
+        version: link:packages/lint-configs/commitlint-config
+      '@AgentMarkdown/eslint-config':
+        specifier: workspace:*
+        version: link:packages/lint-configs/eslint-config
+      '@AgentMarkdown/markdown':
+        specifier: workspace:*
+        version: link:packages/markdown
+      '@AgentMarkdown/prettier-config':
+        specifier: workspace:*
+        version: link:packages/lint-configs/prettier-config
+      '@AgentMarkdown/stylelint-config':
+        specifier: workspace:*
+        version: link:packages/lint-configs/stylelint-config
+      '@AgentMarkdown/typescript-config':
+        specifier: workspace:*
+        version: link:packages/lint-configs/typescript-config
       '@changesets/cli':
         specifier: 'catalog:'
         version: 2.27.12
       '@commitlint/cli':
         specifier: 'catalog:'
         version: 19.7.1(@types/node@24.1.0)(typescript@5.7.3)
-      '@useAgent/commitlint-config':
-        specifier: workspace:*
-        version: link:packages/lint-configs/commitlint-config
-      '@useAgent/eslint-config':
-        specifier: workspace:*
-        version: link:packages/lint-configs/eslint-config
-      '@useAgent/markdown':
-        specifier: workspace:*
-        version: link:packages/markdown
-      '@useAgent/prettier-config':
-        specifier: workspace:*
-        version: link:packages/lint-configs/prettier-config
-      '@useAgent/stylelint-config':
-        specifier: workspace:*
-        version: link:packages/lint-configs/stylelint-config
-      '@useAgent/typescript-config':
-        specifier: workspace:*
-        version: link:packages/lint-configs/typescript-config
       eslint:
         specifier: 'catalog:'
         version: 9.20.1(jiti@2.4.2)
@@ -242,10 +242,10 @@ importers:
 
   apps/docs:
     dependencies:
-      '@useAgent/markdown':
+      '@AgentMarkdown/markdown':
         specifier: workspace:*
         version: link:../../packages/markdown
-      '@useAgent/typescript-config':
+      '@AgentMarkdown/typescript-config':
         specifier: workspace:*
         version: link:../../packages/lint-configs/typescript-config
       vue:
@@ -377,6 +377,9 @@ importers:
 
   packages/markdown:
     devDependencies:
+      '@AgentMarkdown/typescript-config':
+        specifier: workspace:*
+        version: link:../lint-configs/typescript-config
       '@mdit/plugin-katex':
         specifier: 'catalog:'
         version: 0.23.1(markdown-it@14.1.0)
@@ -389,9 +392,6 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 22.13.4
-      '@useAgent/typescript-config':
-        specifier: workspace:*
-        version: link:../lint-configs/typescript-config
       '@vitejs/plugin-vue':
         specifier: 'catalog:'
         version: 5.2.1(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(sass@1.85.0)(terser@5.39.0)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.3))
@@ -438,15 +438,15 @@ importers:
         specifier: ^2.0.1
         version: 2.0.1
     devDependencies:
+      '@AgentMarkdown/typescript-config':
+        specifier: workspace:*
+        version: link:../lint-configs/typescript-config
       '@rollup/plugin-json':
         specifier: 'catalog:'
         version: 6.1.0(rollup@4.34.7)
       '@types/node':
         specifier: ^24.1.0
         version: 24.1.0
-      '@useAgent/typescript-config':
-        specifier: workspace:*
-        version: link:../lint-configs/typescript-config
       rollup:
         specifier: 'catalog:'
         version: 4.34.7
@@ -462,6 +462,12 @@ importers:
 
   playground:
     dependencies:
+      '@AgentMarkdown/markdown':
+        specifier: workspace:*
+        version: link:../packages/markdown
+      '@AgentMarkdown/typescript-config':
+        specifier: workspace:*
+        version: link:../packages/lint-configs/typescript-config
       '@ant-design/icons-vue':
         specifier: 'catalog:'
         version: 7.0.1(vue@3.5.13(typescript@5.7.3))
@@ -474,12 +480,6 @@ importers:
       '@types/markdown-it-emoji':
         specifier: 'catalog:'
         version: 3.0.1
-      '@useAgent/markdown':
-        specifier: workspace:*
-        version: link:../packages/markdown
-      '@useAgent/typescript-config':
-        specifier: workspace:*
-        version: link:../packages/lint-configs/typescript-config
       ant-design-vue:
         specifier: 'catalog:'
         version: 4.2.6(vue@3.5.13(typescript@5.7.3))

@@ -1,6 +1,6 @@
 {
-  "name": "@useAgent/markdown",
-  "description": "@useAgent markdown library",
+  "name": "@AgentMarkdown/markdown",
+  "description": "@AgentMarkdown markdown library",
   "version": "1.0.0",
   "type": "module",
   "main": "dist/cjs/index.js",
@@ -29,7 +29,7 @@
     "publish": "pnpm publish"
   },
   "devDependencies": {
-    "@useAgent/typescript-config": "workspace:*",
+    "@AgentMarkdown/typescript-config": "workspace:*",
     "@types/node": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",

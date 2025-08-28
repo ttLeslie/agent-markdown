@@ -1,5 +1,5 @@
 {
-  "name": "@useAgent/eslint-config",
+  "name": "@AgentMarkdown/eslint-config",
   "version": "0.0.1",
   "private": true,
   "type": "module",

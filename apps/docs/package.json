@@ -1,5 +1,5 @@
 {
-  "name": "@useAgent/docs",
+  "name": "@AgentMarkdown/docs",
   "version": "1.0.0",
   "description": "组件库模板说明文档",
   "main": "index.js",
@@ -13,8 +13,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@useAgent/typescript-config": "workspace:*",
-    "@useAgent/markdown": "workspace:*",
+    "@AgentMarkdown/typescript-config": "workspace:*",
+    "@AgentMarkdown/markdown": "workspace:*",
     "vue": "catalog:"
   },
   "devDependencies": {

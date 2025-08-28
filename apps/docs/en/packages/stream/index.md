@@ -5,7 +5,7 @@
 ## 基础用法
 
 ```ts
-import { StreamFetchClient } from '@useAgent/stream';
+import { StreamFetchClient } from '@AgentMarkdown/stream';
 
 interface IContent {
   content: string;
@@ -57,7 +57,7 @@ streamFetchApp.disconnect();
 消息顺序保证与缓存，当需要处理可能**乱序到达**的流式消息时，可配置消息处理器实现顺序保证。
 
 ```ts
-import { StreamFetchClient } from '@useAgent/stream';
+import { StreamFetchClient } from '@AgentMarkdown/stream';
 
 interface IContent {
   content: string;

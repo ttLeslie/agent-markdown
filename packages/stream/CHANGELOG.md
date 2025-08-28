@@ -1,4 +1,4 @@
-# @useAgent/stream
+# @AgentMarkdown/stream
 
 ## 1.0.0
 

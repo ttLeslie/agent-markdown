@@ -1,5 +1,5 @@
 {
-  "name": "@useAgent/playground",
+  "name": "@AgentMarkdown/playground",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "catalog:",
-    "@useAgent/markdown": "workspace:*",
-    "@useAgent/typescript-config": "workspace:*",
+    "@AgentMarkdown/markdown": "workspace:*",
+    "@AgentMarkdown/typescript-config": "workspace:*",
     "ant-design-vue": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:",

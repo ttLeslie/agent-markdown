@@ -1,5 +1,5 @@
 {
-  "name": "@useAgent/stylelint-config",
+  "name": "@AgentMarkdown/stylelint-config",
   "version": "0.0.1",
   "private": true,
   "type": "module",

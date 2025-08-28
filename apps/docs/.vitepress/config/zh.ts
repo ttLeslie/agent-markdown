@@ -31,11 +31,11 @@ export const zh = defineConfig({
         items: [{ text: '快速开始', link: '/guide/index' }],
       },
       // {
-      //   text: '@useAgent/markdown',
+      //   text: '@AgentMarkdown/markdown',
       //   items: [{ text: 'Markdown', link: '/packages/markdown/index' }],
       // },
       // {
-      //   text: '@useAgent/stream',
+      //   text: '@AgentMarkdown/stream',
       //   items: [{ text: '发送流式请求', link: '/packages/stream/index' }],
       // },
     ],

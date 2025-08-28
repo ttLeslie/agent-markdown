@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 // 保持原有脚本不变
-import { AgentMarkdown } from '@useAgent/markdown';
+import { AgentMarkdown } from '@AgentMarkdown/markdown';
 const content = `
 \`\`\`javascript
 const code = "useAgent/markdown";

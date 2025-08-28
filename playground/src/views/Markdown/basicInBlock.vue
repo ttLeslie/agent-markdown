@@ -21,7 +21,7 @@
         "
       >
         <div class="top">{{ attrs[0].title }}</div>
-        <div class="bottom" style=" font-size: 12px;color: rgb(0 0 0 / 30%)">
+        <div class="bottom" style="font-size: 12px; color: rgb(0 0 0 / 30%)">
           创建时间：{{ attrs[0].time }}
         </div>
       </div>
@@ -29,7 +29,7 @@
   </AgentMarkdown>
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '@useAgent/markdown';
+import { AgentMarkdown } from '@AgentMarkdown/markdown';
 
 const content = `
 根据你的要求，我调整了代码结构:
