@@ -1,3 +1,5 @@
+**English** | [简体中文](./README.zh-CN.md)
+
 # @useAgent/markdown
 
 A Vue3 component based on markdown - it, enabling developers to rapidly build enterprise - level large - model applications.
