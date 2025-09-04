@@ -66,9 +66,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-        # 构建项目
-        # 需要先构建 @mylib/ui 等包后再构建docs
-        # 不能只 pnpm run build:docs 会报如:failed to resolve entry for package "@mylib/hooks"的错误
+        # 运行测试
+      - name: Run tests
+        run: pnpm run test
+        # 运行代码检查
+      - name: Run linting
+        run: pnpm run lint:all
+
+      # 构建项目
+      # 需要先构建 @mylib/ui 等包后再构建docs
+      # 不能只 pnpm run build:docs 会报如:failed to resolve entry for package "@mylib/hooks"的错误
       - name: Build docs project
         run: |
           echo ${{ github.workspace }}

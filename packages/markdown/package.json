@@ -1,6 +1,11 @@
 {
   "name": "@useAgent/markdown",
   "description": "@useAgent markdown library",
+  "homepage": "https://github.com/ttLeslie/useAgent-markdown",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ttLeslie/useAgent-markdown"
+  },
   "version": "1.0.0",
   "type": "module",
   "main": "dist/cjs/index.js",

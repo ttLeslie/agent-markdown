@@ -5,12 +5,12 @@
   "packageManager": "pnpm@9.15.9",
   "author": "huangmingfu <212149997@qq.com>",
   "license": "MIT",
-  "homepage": "https://github.com/huangmingfu/vue3-turbo-component-lib-template",
+  "homepage": "https://github.com/ttLeslie/useAgent-markdown",
   "repository": {
     "type": "git",
-    "url": "https://github.com/huangmingfu/vue3-turbo-component-lib-template"
+    "url": "https://github.com/ttLeslie/useAgent-markdown"
   },
-  "bugs": "https://github.com/huangmingfu/vue3-turbo-component-lib-template/issues",
+  "bugs": "https://github.com/ttLeslie/useAgent-markdown/issues",
   "keywords": [
     "component library template",
     "component library",

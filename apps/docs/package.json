@@ -1,10 +1,11 @@
 {
   "name": "@useAgent/docs",
   "version": "1.0.0",
-  "description": "组件库模板说明文档",
+  "description": "useAgent 说明文档",
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev",
+    "docs:build": "vitepress build docs",
     "build": "rimraf .vitepress/dist && vitepress build",
     "preview": "vitepress preview",
     "clean": "rimraf .turbo node_modules .vitepress/dist .vitepress/cache .vitepress/.temp"
