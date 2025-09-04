@@ -2,7 +2,7 @@
 
 ## 自定义通用的代码块
 
-通过code插槽可自定义所有代码块的渲染方式，支持获取代码语言（lang）和原始代码（rawCode）。
+通过code插槽可自定义所有代码块的渲染方式，支持获取代码语言（`lang`）和原始代码（`rawCode`）。
 
 <demo vue="markdown/basicCode.vue" :vueFiles="{'demo': 'markdown/exbasicCode.vue'}" />
 
