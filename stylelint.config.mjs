@@ -1,4 +1,4 @@
 export default {
   root: true,
-  extends: '@AgentMarkdown/stylelint-config',
+  extends: '@useAgent/stylelint-config',
 };

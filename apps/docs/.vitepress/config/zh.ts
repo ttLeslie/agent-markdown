@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress';
 
 export const zh = defineConfig({
   lang: 'zh-Hans',
-  title: 'AgentMarkdown',
+  title: '@useAgent/markdown',
   description: '基于markdown-It的 vue3组件',
   themeConfig: {
     logo: '/logo.png',
@@ -28,16 +28,11 @@ export const zh = defineConfig({
     sidebar: [
       {
         text: '指南',
-        items: [{ text: '快速开始', link: '/guide/index' }],
+        items: [
+          { text: '快速开始', link: '/guide/index' },
+          { text: '进阶', link: '/packages/markdown/index' },
+        ],
       },
-      // {
-      //   text: '@AgentMarkdown/markdown',
-      //   items: [{ text: 'Markdown', link: '/packages/markdown/index' }],
-      // },
-      // {
-      //   text: '@AgentMarkdown/stream',
-      //   items: [{ text: '发送流式请求', link: '/packages/stream/index' }],
-      // },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/huangmingfu/vue3-turbo-component-lib-template' },

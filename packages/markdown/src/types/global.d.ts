@@ -3,7 +3,7 @@
 declare module 'vue' {
   // GlobalComponents for Volar
   export interface GlobalComponents {
-    AgentMarkdown: (typeof import('@AgentMarkdown/markdown'))['AgentMarkdown'];
+    AgentMarkdown: (typeof import('@useAgent/markdown'))['AgentMarkdown'];
   }
 }
 

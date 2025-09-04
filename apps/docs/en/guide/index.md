@@ -14,19 +14,19 @@ Install via a package manager:
 ::: code-group
 
 ```bash [npm]
-npm install @AgentMarkdown/markdown @AgentMarkdown/stream
+npm install @useAgent/markdown @useAgent/stream
 ```
 
 ```bash [yarn]
-yarn add @AgentMarkdown/markdown @AgentMarkdown/stream
+yarn add @useAgent/markdown @useAgent/stream
 ```
 
 ```bash [pnpm]
-pnpm add @AgentMarkdown/markdown @AgentMarkdown/stream
+pnpm add @useAgent/markdown @useAgent/stream
 ```
 
 ```bash [bun]
-bun add @AgentMarkdown/markdown @AgentMarkdown/stream
+bun add @useAgent/markdown @useAgent/stream
 ```
 
 :::
@@ -36,11 +36,11 @@ bun add @AgentMarkdown/markdown @AgentMarkdown/stream
 ### Streaming Request Library
 
 ```ts
-import { StreamFetchClient } from '@AgentMarkdown/stream';
+import { StreamFetchClient } from '@useAgent/stream';
 ```
 
 ### Markdown Component
 
 ```ts
-import { AgentMarkdown } from '@AgentMarkdown/markdown';
+import { AgentMarkdown } from '@useAgent/markdown';
 ```

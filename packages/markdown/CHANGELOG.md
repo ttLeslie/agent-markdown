@@ -1,4 +1,4 @@
-# @AgentMarkdown/ui
+# @useAgent/ui
 
 ## 1.0.0
 

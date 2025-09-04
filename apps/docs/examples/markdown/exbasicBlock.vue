@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import { AgentMarkdown } from '@AgentMarkdown/markdown';
+import { AgentMarkdown } from '@useAgent/markdown';
 const content = `
 根据你的要求，我调整了代码结构：
 <div data-type="code" data-title="javascript快速排序的示例" data-time="2023-08-01" data-content="function quickSort(arr) {

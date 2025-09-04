@@ -17,7 +17,7 @@
   </AgentMarkdown>
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '@AgentMarkdown/markdown';
+import { AgentMarkdown } from '@useAgent/markdown';
 import MermaidComponent from '../component/MermaidComponent.vue';
 const content = `
 ## mermaid 图表

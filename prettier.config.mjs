@@ -1,1 +1,1 @@
-export { default } from '@AgentMarkdown/prettier-config';
+export { default } from '@useAgent/prettier-config';

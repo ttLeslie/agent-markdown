@@ -7,36 +7,34 @@
 ::: code-group
 
 ```bash [npm]
-npm install AgentMarkdown -D
+npm install @useAgent/markdown --save-dev
 ```
 
 ```bash [yarn]
-yarn add AgentMarkdown -D
+yarn add @useAgent/markdown --save-dev
 ```
 
 ```bash [pnpm]
-pnpm add AgentMarkdown -D
+pnpm add @useAgent/markdown --save-dev
 ```
 
 ```bash [bun]
-bun add AgentMarkdown -D
+bun add @useAgent/markdown --save-dev
 ```
 
 :::
 
 ## 引入组件
 
+### 引入组件样式
+
 ```ts
 // main.ts
-import { AgentMarkdown } from 'AgentMarkdown';
-import 'AgentMarkdown/style.css';
-
-// 全局注册
-app.component('AgentMarkdown', AgentMarkdown);
+import '@useAgent/markdown/style.css';
 ```
 
 ## 基本用法
 
-基础用法中，组件会默认渲染所有标准 `markdown` 语法，包括标题、文本样式、列表、链接、图片、表格、代码块、公式等。
+基础用法中，组件会默认渲染所有标准 `markdown` 语法，包括 emoji、标题、文本样式、列表、链接、图片、表格、代码块、公式等。
 
-<demo vue="markdown/basic.vue" :vueFiles="{'demo': 'markdown/exbasic.vue'}"  />
+<demo vue="markdown/basic.vue"   />

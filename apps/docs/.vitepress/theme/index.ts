@@ -1,9 +1,7 @@
 import DefaultTheme from 'vitepress/theme';
-// 引入UI库的样式
-// import { useGlobalComp } from '../utils/useGlobalComp';
 // 自定义样式重载
+// import '@useAgent/markdown/style.css';
 import './styles/global.css';
-import '@AgentMarkdown/markdown/style.css';
 
 export default {
   extends: DefaultTheme,

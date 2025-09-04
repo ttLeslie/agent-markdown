@@ -1,1 +1,1 @@
-export { default } from '@AgentMarkdown/eslint-config';
+export { default } from '@useAgent/eslint-config';

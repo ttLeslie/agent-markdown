@@ -2,19 +2,19 @@
 
 ### Features 新增
 
-- **@AgentMarkdown/ui:** [UI 组件库 ui component library](./packages/ui/CHANGELOG.md)
-- **@AgentMarkdown/utils:** [工具库 utility library](./packages/utils/CHANGELOG.md)
-- **@AgentMarkdown/hooks:** [Hooks 库 hooks library](./packages/hooks/CHANGELOG.md)
-- **@AgentMarkdown/directives:** [自定义指令库 directives library](./packages/directives/CHANGELOG.md)
+- **@useAgent/ui:** [UI 组件库 ui component library](./packages/ui/CHANGELOG.md)
+- **@useAgent/utils:** [工具库 utility library](./packages/utils/CHANGELOG.md)
+- **@useAgent/hooks:** [Hooks 库 hooks library](./packages/hooks/CHANGELOG.md)
+- **@useAgent/directives:** [自定义指令库 directives library](./packages/directives/CHANGELOG.md)
 <!-- ### Other Changes -->
-- **@AgentMarkdown/typescript-config:** TypeScript 配置
-- **@AgentMarkdown/prettier-config:** Prettier 配置
-- **@AgentMarkdown/stylelint-config:** Stylelint 配置
-- **@AgentMarkdown/eslint-config:** ESLint 配置
-- **@AgentMarkdown/commitlint-config:** Commitlint 配置
-- **@AgentMarkdown/playground:** 演练场
-- **@AgentMarkdown/docs:** 文档
-- **@AgentMarkdown/build:** Gulp 打包配置
+- **@useAgent/typescript-config:** TypeScript 配置
+- **@useAgent/prettier-config:** Prettier 配置
+- **@useAgent/stylelint-config:** Stylelint 配置
+- **@useAgent/eslint-config:** ESLint 配置
+- **@useAgent/commitlint-config:** Commitlint 配置
+- **@useAgent/playground:** 演练场
+- **@useAgent/docs:** 文档
+- **@useAgent/build:** Gulp 打包配置
 
 <!-- ### Features 新增 -->
 <!-- ### Bug Fixes 修复 -->

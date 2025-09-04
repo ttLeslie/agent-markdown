@@ -2,7 +2,7 @@
   <AgentMarkdown :content="content" />
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '@AgentMarkdown/markdown';
+import { AgentMarkdown } from '@useAgent/markdown';
 
 const content = `
 ## emoji :kissing: :kissing: :kissing:

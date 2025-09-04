@@ -1,1 +1,1 @@
-export { default } from '@AgentMarkdown/commitlint-config';
+export { default } from '@useAgent/commitlint-config';
