@@ -136,7 +136,9 @@ export default function createVNode(
       ];
 
       const tagPattern = new RegExp(
-        `<((${inlineTags.join('|')}))\\b([^>]*?)>(.*?)</\\2>|<((${inlineTags.join('|')}))\\b([^/]*/?)>`,
+        `<((${inlineTags.join(
+          '|',
+        )}))\\b([^>]*?)>(.*?)</\\2>|<((${inlineTags.join('|')}))\\b([^/]*/?)>`,
         'gi',
       );
 
@@ -223,7 +225,9 @@ export default function createVNode(
       ];
 
       const tagPattern = new RegExp(
-        `<((${blockTags.join('|')}))\\b([^>]*?)>([\\s\\S]*?)</\\2>|<((${blockTags.join('|')}))\\b([^/]*/?)>`,
+        `<((${blockTags.join('|')}))\\b([^>]*?)>([\\s\\S]*?)</\\2>|<((${blockTags.join(
+          '|',
+        )}))\\b([^/]*/?)>`,
         'gi',
       );
 
@@ -368,6 +372,11 @@ export default function createVNode(
         baseProps.href = 'javascript:void(0)';
         baseProps.title = getAAttr(tagNode, 'title');
         baseProps['data-href'] = getAAttr(tagNode, 'href');
+      }
+
+      if (tag === 'table') {
+        baseProps.class = 'markdown-table-container';
+        return h('div', baseProps, [h(tag, baseProps, childNodes)]);
       }
 
       return h(tag, baseProps, childNodes);

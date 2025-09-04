@@ -1,75 +1,35 @@
-# @useAgent/ui
-
-Vue 3 组件库，基于 Vue 3 + TypeScript 构建的现代化组件库。
-
-## 特性
-
-- 🚀 基于 Vue 3 + TypeScript 构建
-- 📦 支持按需引入
-- 💪 使用 Monorepo + pnpm 工作区管理
-- 📝 完整的类型定义
-- 🔧 完善的开发工具链
+# 快速开始
 
 ## 安装
 
-```bash
-npm install @useAgent/ui
+使用包管理器安装：
 
-yarn add @useAgent/ui
-
-pnpm add @useAgent/ui
+```shell
+npm install @useAgent/markdown --save-dev
+// or
+yarn add @useAgent/markdown --save-dev
+// or
+pnpm add @useAgent/markdown --save-dev
 ```
 
-## 快速开始
+## 引入组件
 
-### 全局引入
+### 引入组件样式
 
 ```ts
 // main.ts
-import { createApp } from 'vue';
-import App from './App.vue';
-
-import VUI from '@useAgent/ui';
-import '@useAgent/ui/style.css';
-
-const app = createApp(App);
-app.use(VUI);
-app.mount('#app');
+import '@useAgent/markdown/style.css';
 ```
 
-### 按需引入
+## 基本用法
 
-```ts
-// main.ts
-import { createApp } from 'vue';
-import App from './App.vue';
-
-import { Button } from '@useAgent/ui';
-import '@useAgent/ui/style.css';
-
-const app = createApp(App);
-app.use(Button);
-app.mount('#app');
-```
-
-## 使用示例
+基础用法中，组件会默认渲染所有标准 `markdown` 语法，包括 emoji、标题、文本样式、列表、链接、图片、表格、代码块、公式等。
 
 ```vue
 <template>
-  <VButton @click="open = true">弹窗</VButton>
-  <VButton type="primary">按钮</VButton>
-  <VButton type="success">按钮</VButton>
-  <VButton type="warning">按钮</VButton>
-  <VButton type="danger">按钮</VButton>
-  <VButton type="info">按钮</VButton>
-  <VDialog v-model:open="open">
-    <div>弹窗测试2222</div>
-  </VDialog>
+  <AgentMarkdown :content="content" />
 </template>
-
 <script setup lang="ts">
-import { VButton, VDialog } from '@useAgent/ui';
-import { ref } from 'vue';
-const open = ref(false);
-</script>
+import { AgentMarkdown } from '@useAgent/markdown';
+const content = `# 你好，useAgent`
 ```
