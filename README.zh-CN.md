@@ -43,22 +43,18 @@ import '@useAgent/markdown/style.css';
 
 ```vue
 <template>
-  <Markdown :content="markdownContent" />
+  <AgentMarkdown :content="markdownContent" />
 </template>
+<script setup lang="ts">
+import { AgentMarkdown } from '@useAgent/markdown';
 
-<script setup>
-import { ref } from 'vue';
-import Markdown from '@useAgent/markdown';
+const markdownContent = `
+# Title Example
 
-const markdownContent = ref(`
-# 标题示例
+This is a **bold text** and this is an *italic text*.
 
-这是一段**加粗文本**，这是一段*斜体文本*。
+- List item 1
+- List item 2
 
-- 列表项 1
-- 列表项 2
-
-![示例图片](https://picsum.photos/200/300)
-`);
-</script>
-```
+![Sample Image](https://picsum.photos/200/300)
+`;

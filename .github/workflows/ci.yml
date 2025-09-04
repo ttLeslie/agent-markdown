@@ -3,9 +3,9 @@ name: Deploy Pages
 # 触发条件，push到master分支或者pull request到master分支
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
   # 支持手动在工作流上触发
   workflow_dispatch:

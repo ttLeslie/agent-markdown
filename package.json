@@ -1,9 +1,9 @@
 {
-  "name": "vue3-component-lib-template",
-  "description": "This is a modern component library template based on Turborepo + Vue 3.5 + TypeScript.",
+  "name": "useAgent-markdown",
+  "description": "A Vue3 component based on markdown-it, enabling developers to rapidly build enterprise - level large - model applications.",
   "version": "1.0.0",
   "packageManager": "pnpm@9.15.9",
-  "author": "huangmingfu <212149997@qq.com>",
+  "author": "jingtaolai <1278207976@qq.com>",
   "license": "MIT",
   "homepage": "https://github.com/ttLeslie/useAgent-markdown",
   "repository": {
@@ -12,15 +12,13 @@
   },
   "bugs": "https://github.com/ttLeslie/useAgent-markdown/issues",
   "keywords": [
-    "component library template",
-    "component library",
-    "ui framework",
-    "ui",
-    "turborepo",
-    "monorepo",
-    "vue3 typescript",
-    "vite6",
-    "turbo"
+    "vue3",
+    "component",
+    "markdown",
+    "markdown-it",
+    "markdown-it-emoji",
+    "Agent",
+    "typescript"
   ],
   "scripts": {
     "dev": "turbo run dev",

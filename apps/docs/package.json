@@ -10,7 +10,14 @@
     "preview": "vitepress preview",
     "clean": "rimraf .turbo node_modules .vitepress/dist .vitepress/cache .vitepress/.temp"
   },
-  "keywords": [],
+  "keywords": [
+    "vue3",
+    "component",
+    "markdown",
+    "markdown-It",
+    "Agent",
+    "typescript"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
