@@ -7,19 +7,19 @@
 ::: code-group
 
 ```bash [npm]
-npm install @useAgent/markdown --save-dev
+npm install @agent/markdown --save-dev
 ```
 
 ```bash [yarn]
-yarn add @useAgent/markdown --save-dev
+yarn add @agent/markdown --save-dev
 ```
 
 ```bash [pnpm]
-pnpm add @useAgent/markdown --save-dev
+pnpm add @agent/markdown --save-dev
 ```
 
 ```bash [bun]
-bun add @useAgent/markdown --save-dev
+bun add @agent/markdown --save-dev
 ```
 
 :::
@@ -30,7 +30,7 @@ bun add @useAgent/markdown --save-dev
 
 ```ts
 // main.ts
-import '@useAgent/markdown/style.css';
+import '@agent/markdown/style.css';
 ```
 
 ## 基本用法

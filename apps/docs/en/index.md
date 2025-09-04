@@ -1,7 +1,7 @@
 ---
 layout: home
 hero:
-  name: '@useAgent/markdown'
+  name: '@agent/markdown'
   text: LLM Application Rendering Component
   tagline: A Vue3 component based on markdown - It, which helps developers quickly build enterprise - level
   image:

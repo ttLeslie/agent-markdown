@@ -1,4 +1,4 @@
-# @useAgent/markdown
+# @agent/markdown
 
 基于 markdown-it 的 Vue3 组件，助力开发者快速搭建企业级大模型应用。
 
@@ -13,19 +13,19 @@
 使用任意包管理器安装：
 
 ```bash [npm]
-npm install @useAgent/markdown --save-dev
+npm install @agent/markdown --save-dev
 ```
 
 ```bash [yarn]
-yarn add @useAgent/markdown --save-dev
+yarn add @agent/markdown --save-dev
 ```
 
 ```bash [pnpm]
-pnpm add @useAgent/markdown --save-dev
+pnpm add @agent/markdown --save-dev
 ```
 
 ```bash [bun]
-bun add @useAgent/markdown --save-dev
+bun add @agent/markdown --save-dev
 ```
 
 ## 快速开始
@@ -34,7 +34,7 @@ bun add @useAgent/markdown --save-dev
 
 ```ts
 // main.ts
-import '@useAgent/markdown/style.css';
+import '@agent/markdown/style.css';
 ```
 
 ### 基本用法
@@ -46,7 +46,7 @@ import '@useAgent/markdown/style.css';
   <AgentMarkdown :content="markdownContent" />
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '@useAgent/markdown';
+import { AgentMarkdown } from '@agent/markdown';
 
 const markdownContent = `
 # Title Example
@@ -58,3 +58,4 @@ This is a **bold text** and this is an *italic text*.
 
 ![Sample Image](https://picsum.photos/200/300)
 `;
+```

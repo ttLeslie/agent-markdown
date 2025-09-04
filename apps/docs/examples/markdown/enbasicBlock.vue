@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { AgentMarkdown } from '@useAgent/markdown';
+import { AgentMarkdown } from '@agent/markdown';
 const content = `
 According to your requirements, I've adjusted the code structure:
 <div data-type="code" data-title="Example of JavaScript Quick Sort" data-time="2023-08-01" data-content="function quickSort(arr) {

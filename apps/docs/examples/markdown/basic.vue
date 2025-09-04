@@ -2,7 +2,7 @@
   <AgentMarkdown :content="content" />
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '@useAgent/markdown';
+import { AgentMarkdown } from '@agent/markdown';
 
 const content = `
 ## emoji :kissing: :kissing: :kissing:
@@ -33,12 +33,12 @@ const content = `
 
 ### 行内代码
 
-用 \`@useAgent\` 表示 行内块代码用 \`\` 语句
+用 \`@agent\` 表示 行内块代码用 \`\` 语句
 
 ### 代码块
 
 \`\`\`javascript
-const code = "@useAgent/markdown";
+const code = "@agent/markdown";
 \`\`\`
 
 ### 行内公式

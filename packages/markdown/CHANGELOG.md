@@ -1,4 +1,4 @@
-# @useAgent/ui
+# @agent/ui
 
 ## 1.0.0
 

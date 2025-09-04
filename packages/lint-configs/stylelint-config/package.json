@@ -1,5 +1,5 @@
 {
-  "name": "@useAgent/stylelint-config",
+  "name": "@agent/stylelint-config",
   "version": "0.0.1",
   "private": true,
   "type": "module",

@@ -2,7 +2,7 @@
   <AgentMarkdown :content="content" :href="false" @link-click="handleLinkClick" />
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '@useAgent/markdown';
+import { AgentMarkdown } from '@agent/markdown';
 
 const content = `
 超链接：[useAgent](https://.com "useAgent 官网")

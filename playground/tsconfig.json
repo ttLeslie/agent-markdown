@@ -1,8 +1,8 @@
 {
-  "extends": "@useAgent/typescript-config/vite.json",
+  "extends": "@agent/typescript-config/vite.json",
   "compilerOptions": {
     "skipLibCheck": true,
-    // "types": ["vite/client", "@useAgent/ui/global.d.ts"], // 已在env.d.ts引入了
+    // "types": ["vite/client", "@agent/ui/global.d.ts"], // 已在env.d.ts引入了
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -17,7 +17,7 @@
     "paths": {
       "@/*": ["src/*"],
       "~/*": ["../packages/markdown/src/*"],
-      "~/@useAgent/markdown": ["../packages/markdown/src/index.ts"]
+      "~/@agent/markdown": ["../packages/markdown/src/index.ts"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]

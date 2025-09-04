@@ -1,1 +1,1 @@
-export { default } from '@useAgent/prettier-config';
+export { default } from '@agent/prettier-config';

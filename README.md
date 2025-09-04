@@ -1,6 +1,6 @@
 **English** | [简体中文](./README.zh-CN.md)
 
-# @useAgent/markdown
+# @agent/markdown
 
 A Vue3 component based on markdown - it, enabling developers to rapidly build enterprise - level large - model applications.
 
@@ -15,19 +15,19 @@ A Vue3 component based on markdown - it, enabling developers to rapidly build en
 Install with any package manager:
 
 ```bash [npm]
-npm install @useAgent/markdown --save-dev
+npm install @agent/markdown --save-dev
 ```
 
 ```bash [yarn]
-yarn add @useAgent/markdown --save-dev
+yarn add @agent/markdown --save-dev
 ```
 
 ```bash [pnpm]
-pnpm add @useAgent/markdown --save-dev
+pnpm add @agent/markdown --save-dev
 ```
 
 ```bash [bun]
-bun add @useAgent/markdown --save-dev
+bun add @agent/markdown --save-dev
 ```
 
 ## Quick Start
@@ -36,7 +36,7 @@ bun add @useAgent/markdown --save-dev
 
 ```ts
 // main.ts
-import '@useAgent/markdown/style.css';
+import '@agent/markdown/style.css';
 ```
 
 ### Basic Usage
@@ -48,7 +48,7 @@ By default, the component supports the rendering of all standard Markdown syntax
   <AgentMarkdown :content="markdownContent" />
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '@useAgent/markdown';
+import { AgentMarkdown } from '@agent/markdown';
 
 const markdownContent = `
 # Title Example

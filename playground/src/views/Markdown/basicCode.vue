@@ -14,13 +14,13 @@
   </AgentMarkdown>
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '@useAgent/markdown';
+import { AgentMarkdown } from '@agent/markdown';
 
 const content = `
 ## 自定义代码块样式
 
 \`\`\`javascript
-const code = "@useAgent/markdown";
+const code = "@agent/markdown";
 \`\`\`
 
 `;

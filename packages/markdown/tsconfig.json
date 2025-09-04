@@ -1,6 +1,6 @@
 {
   // 继承 Vite 配置
-  "extends": "@useAgent/typescript-config/vite.json",
+  "extends": "@agent/typescript-config/vite.json",
   "compilerOptions": {
     // 移除 .d.ts.map 文件映射
     "declarationMap": false,

@@ -1,5 +1,5 @@
 {
-  "name": "@useAgent/build",
+  "name": "@agent/build",
   "description": "glup build config",
   "version": "1.0.0",
   "private": true,

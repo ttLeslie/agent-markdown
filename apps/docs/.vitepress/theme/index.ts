@@ -1,6 +1,6 @@
 import DefaultTheme from 'vitepress/theme';
 // 自定义样式重载
-// import '@useAgent/markdown/style.css';
+// import '@agent/markdown/style.css';
 import './styles/global.css';
 
 export default {

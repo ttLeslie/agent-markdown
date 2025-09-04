@@ -1,6 +1,6 @@
 {
-  "name": "@useAgent/markdown",
-  "description": "@useAgent markdown library",
+  "name": "@agent/markdown",
+  "description": "@agent markdown library",
   "homepage": "https://github.com/ttLeslie/useAgent-markdown",
   "repository": {
     "type": "git",
@@ -43,7 +43,7 @@
     "publish": "pnpm publish"
   },
   "devDependencies": {
-    "@useAgent/typescript-config": "workspace:*",
+    "@agent/typescript-config": "workspace:*",
     "@types/node": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
