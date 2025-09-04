@@ -37,7 +37,7 @@ const MarkdownRenderer = defineComponent({
       const tree = getCompontentTree(props.content, mdIt);
 
       const vNodes = tree.map((node, index) => {
-        return createVNode(node, index, mdIt, slots, props.sanitize);
+        return createVNode(node, index, mdIt, slots, props.sanitize, props.href);
       });
 
       return h(

@@ -26,10 +26,6 @@ yarn add agent-markdown-vue --save-dev
 pnpm add agent-markdown-vue --save-dev
 ```
 
-```bash [bun]
-bun add agent-markdown-vue --save-dev
-```
-
 ### Basic Usage
 
 By default, the component supports the rendering of all standard Markdown syntax, including emojis, headings, text styles, lists, links, images, tables, code blocks, and formulas.

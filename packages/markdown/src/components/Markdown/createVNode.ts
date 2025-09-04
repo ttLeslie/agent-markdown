@@ -8,9 +8,10 @@ const processChildren = (
   mdIt: MarkdownIt,
   slots: Slots,
   sanitize: boolean,
+  href: boolean,
 ): (VNode | string)[] => {
   return children
-    .map((child, index) => createVNode(child, index, mdIt, slots, sanitize))
+    .map((child, index) => createVNode(child, index, mdIt, slots, sanitize, href))
     .filter(Boolean) as (VNode | string)[];
 };
 
@@ -57,6 +58,7 @@ export default function createVNode(
   mdIt: MarkdownIt,
   slots: Slots,
   sanitize: boolean,
+  href: boolean,
 ): VNode | string | null {
   const { ComponentType } = node;
 
@@ -89,7 +91,7 @@ export default function createVNode(
       return h('br', { key: index });
 
     case 'inline': {
-      const children = processChildren((node as TagToken).children, mdIt, slots, sanitize);
+      const children = processChildren((node as TagToken).children, mdIt, slots, sanitize, href);
       return h(Fragment, { key: index }, children);
     }
 
@@ -363,13 +365,13 @@ export default function createVNode(
     case 'default': {
       const tagNode = node as TagToken;
       const { tag, children } = tagNode;
-      const childNodes = processChildren(children, mdIt, slots, sanitize);
+      const childNodes = processChildren(children, mdIt, slots, sanitize, href);
       const baseProps: Record<string, string | number> = { key: index };
 
       baseProps.class = `markdown-${tag}`;
 
       if (tag === 'a') {
-        baseProps.href = 'javascript:void(0)';
+        !href && (baseProps.href = 'javascript:void(0)');
         baseProps.title = getAAttr(tagNode, 'title');
         baseProps['data-href'] = getAAttr(tagNode, 'href');
       }
