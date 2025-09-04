@@ -66,10 +66,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      #   # 运行测试
+      #   运行测试
       # - name: Run tests
       #   run: pnpm run test
-      #   # 运行代码检查
+      #   运行代码检查
       # - name: Run linting
       #   run: pnpm run lint:all
       # 构建项目
