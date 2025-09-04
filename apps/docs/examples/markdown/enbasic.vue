@@ -1,5 +1,5 @@
 <template>
-  <AgentMarkdown :content="content" />
+  <AgentMarkdown :content="content" @link-click="handleLink" />
 </template>
 <script setup lang="ts">
 import { AgentMarkdown } from 'agent-markdown-vue';
@@ -9,7 +9,7 @@ const content = `
 
 # n - level Headings 
 
-**Text** __Text__ *Text*  _Text_ ***Text*** ~~Text~~ Hyperlink [useAgent](https:// "useAgent")
+**Text** __Text__ *Text*  _Text_ ***Text*** ~~Text~~ Hyperlink [agent-markdown](https://ttleslie.github.io/agent-markdown/ "agent-markdown 官网")
 
 - Unordered list item
 
@@ -19,8 +19,8 @@ const content = `
 
 | Name|	Age|	Profession|
 | ---- | ---- | ---- |
-| useAgent [useAgent_link](https://.com "useAgent") | 11   | Agent |
-| useAgent [useAgent_link](https://.com "useAgent") | 11   | Agent |
+| agent-markdown  [agent-markdown](https://ttleslie.github.io/agent-markdown/ "agent-markdown") | 11   | Agent |
+| agent-markdown  [agent-markdown](https://ttleslie.github.io/agent-markdown/ "agent-markdown") | 11   | Agent |
 
 
 >A quoted text
@@ -52,6 +52,10 @@ F(\\omega) = \\int_{-\\infty}^{\\infty} f(t) e^{-i\\omega t} dt
 $$
 
 `;
+
+const handleLink = (e: Event, href: string, title: string) => {
+  window.open(href, '_blank');
+};
 </script>
 
 <style scoped>

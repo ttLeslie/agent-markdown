@@ -18,10 +18,6 @@ yarn add agent-markdown-vue --save-dev
 pnpm add agent-markdown-vue --save-dev
 ```
 
-```bash [bun]
-bun add agent-markdown-vue --save-dev
-```
-
 :::
 
 ## Base usage

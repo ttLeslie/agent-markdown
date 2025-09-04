@@ -24,10 +24,6 @@ yarn add agent-markdown-vue --save-dev
 pnpm add agent-markdown-vue --save-dev
 ```
 
-```bash [bun]
-bun add agent-markdown-vue --save-dev
-```
-
 ### 基本用法
 
 组件默认支持所有标准 Markdown 语法渲染，包括 emoji、标题、文本样式、列表、链接、图片、表格、代码块、公式等。

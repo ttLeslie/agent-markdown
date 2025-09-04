@@ -16,7 +16,7 @@
 import { AgentMarkdown } from 'agent-markdown-vue';
 const content = `
 \`\`\`javascript
-const code = "useAgent/markdown";
+const code = "agent-markdown-vue";
 \`\`\`
 `;
 </script>
