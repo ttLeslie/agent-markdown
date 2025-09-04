@@ -11,16 +11,25 @@
         <pre><code class="language-{{ lang }}">{{ rawCode }}</code></pre>
       </div>
     </template>
+    <template #mermaid="{ rawCode }">
+      <MermaidComponent :content="rawCode" />
+    </template>
   </AgentMarkdown>
 </template>
 <script setup lang="ts">
 import { AgentMarkdown } from '@useAgent/markdown';
-
+import MermaidComponent from '../component/MermaidComponent.vue';
 const content = `
-## 自定义代码块样式
 
-\`\`\`javascript
-const code = "@useAgent/markdown";
+\`\`\`mermaid
+pie
+    "Media and Culture - related" : 35
+    "Advertising and Marketing" : 8
+    "Game Development" : 15
+    "Film, Animation and Special Effects" : 12
+    "Internet Product Design" : 10
+    "VR/AR Development" : 5
+    "Others" : 15
 \`\`\`
 
 `;

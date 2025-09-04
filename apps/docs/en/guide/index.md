@@ -1,46 +1,40 @@
 # Quick Start
 
-## Introduction
-
-useAgent is a front - end solution for large - model applications based on Vue3, which provides the following two components:
-
-- Markdown component
-- Streaming request library
-
 ## Installation
 
-Install via a package manager:
+Install using a package manager:
 
 ::: code-group
 
 ```bash [npm]
-npm install @useAgent/markdown @useAgent/stream
+npm install @useAgent/markdown --save-dev
 ```
 
 ```bash [yarn]
-yarn add @useAgent/markdown @useAgent/stream
+yarn add @useAgent/markdown --save-dev
 ```
 
 ```bash [pnpm]
-pnpm add @useAgent/markdown @useAgent/stream
+pnpm add @useAgent/markdown --save-dev
 ```
 
 ```bash [bun]
-bun add @useAgent/markdown @useAgent/stream
+bun add @useAgent/markdown --save-dev
 ```
 
 :::
 
-## Usage
+## Importing the Component
 
-### Streaming Request Library
-
-```ts
-import { StreamFetchClient } from '@useAgent/stream';
-```
-
-### Markdown Component
+### Importing the Component Styles
 
 ```ts
-import { AgentMarkdown } from '@useAgent/markdown';
+// main.ts
+import '@useAgent/markdown/style.css';
 ```
+
+## Base usage
+
+In basic usage, the component will render all standard `markdown` syntax by default, including emojis, headings, text styles, lists, links, images, tables, code blocks, formulas, etc.
+
+<demo vue="markdown/enbasic.vue"   />

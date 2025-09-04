@@ -5,7 +5,7 @@ export const zh = defineConfig({
   title: '@useAgent/markdown',
   description: '基于markdown-It的 vue3组件',
   themeConfig: {
-    logo: '/logo.png',
+    // logo: '/logo.png',
     // https://vitepress.dev/reference/default-theme-config
     // nav: [
     // { text: '首页', link: '/' },

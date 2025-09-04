@@ -4,7 +4,7 @@
       <div class="custom-code-block">
         <div class="code-block-header">
           <span class="code-block-lang">{{ lang }}</span>
-          <button class="copy-btn">复制</button>
+          <button class="copy-btn">Copy</button>
         </div>
         <pre><code class="language-{{ lang }}">{{ rawCode }}</code></pre>
       </div>

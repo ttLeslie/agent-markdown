@@ -7,45 +7,45 @@ import { AgentMarkdown } from '@useAgent/markdown';
 const content = `
 ## emoji :kissing: :kissing: :kissing:
 
-# n级标题 
+# n - level Headings 
 
-**粗体文本** __这也是粗体文本__ *斜体文本*  _这也是斜体文本_ ***粗斜体文本*** ~~删除线的文本~~ 超链接 [useAgent](https:// "useAgent")
+**Text** __Text__ *Text*  _Text_ ***Text*** ~~Text~~ Hyperlink [useAgent](https:// "useAgent")
 
-- 无序列表项
+- Unordered list item
 
-1. 有序列表项
+1. Ordered list item
 
 
 
-| 姓名 | 年龄 | 职业 |
+| Name|	Age|	Profession|
 | ---- | ---- | ---- |
 | useAgent [useAgent_link](https://.com "useAgent") | 11   | Agent |
 | useAgent [useAgent_link](https://.com "useAgent") | 11   | Agent |
 
 
->一段引用文本
+>A quoted text
 >
->> 嵌套的引用文本
+>> Nested quoted text
 
-### 图片
+### Images
 
-![示例图片](https://thaka.bing.com/th/id/OIP.aBW9fjZTNtddeFpYAzcgJwHaLB?&rs=1&pid=ImgDetMain&o=7&rm=3 "一张示例图")
+![Images](https://thaka.bing.com/th/id/OIP.aBW9fjZTNtddeFpYAzcgJwHaLB?&rs=1&pid=ImgDetMain&o=7&rm=3 "An example image")
 
-### 行内代码
+### Inline Code
 
-用 \`@useAgent\` 表示 行内块代码用 \`\` 语句
+Use \`@useAgent\` to represent inline code blocks use \`\` statements
 
-### 代码块
+### Code Blocks
 
 \`\`\`javascript
 const code = "@useAgent/markdown";
 \`\`\`
 
-### 行内公式
+### Inline Formulas
 
 Euler’s identity $e^{i\pi}+1=0$ is a beautiful formula in $\mathbb{R}^2$.
 
-### 块级公式
+### Block Formulas
 
 $$
 F(\\omega) = \\int_{-\\infty}^{\\infty} f(t) e^{-i\\omega t} dt

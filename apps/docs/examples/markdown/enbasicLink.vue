@@ -5,7 +5,7 @@
 import { AgentMarkdown } from '@useAgent/markdown';
 
 const content = `
-超链接：[useAgent](https://.com "useAgent 官网")
+Hyperlink：[useAgent](https://.com "useAgent 官网")
 `;
 
 const handleLinkClick = (e: Event, href: string, title: string) => {

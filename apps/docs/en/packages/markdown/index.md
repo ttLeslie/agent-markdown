@@ -1,28 +1,28 @@
-# markdown组件
+# Markdown Component
 
-这是一个基于 `markdownIt` 的 `Vu3`组件, 专适用用于大模型前端应用场景渲染 `markdown`内容，完美支持**增量渲染&交互式组件实现**。
+This is a `Vue3` component based on `markdownIt`, specifically designed for rendering `markdown` content in front - end application scenarios of large models. It perfectly supports **incremental rendering & implementation of interactive components**.
 
-## 基本用法
+## Basic Usage
 
-基础用法中，组件会默认渲染所有标准 `markdown` 语法，包括标题、文本样式、列表、链接、图片、表格、代码块、公式等。
+In basic usage, the component will render all standard `markdown` syntax by default, including headings, text styles, lists, links, images, tables, code blocks, formulas, etc.
 
-<demo vue="markdown/basic.vue" :vueFiles="{'demo': 'markdown/exbasic.vue'}"  />
+<demo vue="markdown/enbasic.vue"  />
 
-## 自定义通用的代码块
+## Customize General Code Blocks
 
-通过code插槽可自定义所有代码块的渲染方式，支持获取代码语言（lang）和原始代码（rawCode）。
+The `code` slot can be used to customize the rendering of all code blocks, and it supports obtaining the code language (`lang`) and the original code (`rawCode`).
 
-<demo vue="markdown/basicCode.vue" :vueFiles="{'demo': 'markdown/exbasicCode.vue'}" />
+<demo vue="markdown/enbasicCode.vue" />
 
-相关的代码块样式可以参考 [highlight.js](https://highlightjs.org/) 或者 [shiki](https://shiki.tmrs.site/)
+For relevant code block styles, you can refer to [highlight.js](https://highlightjs.org/) or [shiki](https://shiki.tmrs.site/).
 
-## 自定义特殊的代码块
+## Customize Special Code Blocks
 
-对于特殊类型的代码块（如mermaid流程图），可通过语言名匹配的插槽（如#mermaid）单独自定义渲染逻辑。
+For special types of code blocks (such as mermaid flowcharts), you can use the slot matched by the language name (such as `#mermaid`) to customize the rendering logic separately.
 
-<demo vue="markdown/basicMermaid.vue" />
+<demo vue="markdown/enbasicMermaid.vue" />
 
-### mermaid组件示例
+### Mermaid Component Example
 
 ```vue
 <script lang="ts" setup>
@@ -88,7 +88,7 @@ function render() {
 </template>
 
 <style>
-/* 隐藏 Mermaid 错误时的弹窗 */
+/* Hide the pop - up window when Mermaid has an error */
 body > [id^='dv-'] svg {
   position: fixed;
   top: 0;
@@ -97,66 +97,66 @@ body > [id^='dv-'] svg {
 </style>
 ```
 
-## 自定义行内可交互组件
+## Customize In - line Interactive Components
 
-通过 `htmlInline`插槽可捕获 `markdown` 中的行内 `HTML` 标签（如`span`），并基于标签属性（`attrs`）自定义交互逻辑，适用于实现引用标注、动态提示等功能。
+The `htmlInline` slot can be used to capture in - line `HTML` tags (such as `span`) in `markdown` and customize the interactive logic based on the tag attributes (`attrs`). This is suitable for implementing functions such as reference annotations and dynamic prompts.
 
-<demo vue="markdown/basicInline.vue" :vueFiles="{'demo': 'markdown/exbasicInline.vue'}" />
+<demo vue="markdown/enbasicInline.vue"  />
 
-## 自定义块级可交互组件
+## Customize Block - level Interactive Components
 
-通过 `htmlBlock`插槽可处理块级 `HTML` 标签（如`div`），结合标签属性实现复杂的块级交互组件，例如带标题和元数据的自定义卡片。
+The `htmlBlock` slot can be used to handle block - level `HTML` tags (such as `div`). By combining the tag attributes, complex block - level interactive components can be implemented, such as custom cards with titles and metadata.
 
-<demo vue="markdown/basicBlock.vue" :vueFiles="{'demo': 'markdown/exbasicBlock.vue'}" />
+<demo vue="markdown/enbasicBlock.vue"  />
 
-## 自定义图片组件
+## Customize Image Components
 
-通过 `image`插槽可自定义图片渲染方式，支持获取图片地址（`src`）、替代文本（`alt`）和标题（`title`），可扩展实现图片预览、懒加载等功能。
+The `image` slot can be used to customize the image rendering method. It supports obtaining the image address (`src`), alternative text (`alt`), and title (`title`), and can be extended to implement functions such as image preview and lazy loading.
 
-<demo vue="markdown/basicImage.vue" />
+<demo vue="markdown/enbasicImage.vue" />
 
-## 超链接点击事件
+## Hyperlink Click Event
 
-通过 `link-click`事件可捕获点击的超链接，事件参数为点击事件对象、链接地址、链接文本。
+The `link - click` event can be used to capture the clicked hyperlink. The event parameters are the click event object, the link address, and the link text.
 
-<demo vue="markdown/basicLink.vue" />
+<demo vue="markdown/enbasicLink.vue" />
 
-## API 文档
+## API Documentation
 
 ### Props
 
-| 参数名    | 类型      | 默认值  | 说明                                                                                             |
-| --------- | --------- | ------- | ------------------------------------------------------------------------------------------------ |
-| content   | `string`  | `''`    | 必选，需要渲染的 markdown 文本                                                                   |
-| mdOptions | `Object`  | `{}`    | 可选，markdown-it 的配置选项，详见[markdown-it 文档](https://markdown-it.github.io/markdown-it/) |
-| href      | `boolean` | `false` | 可选，是否启用超链接解析到href属性上，默认不解析，可通过`link-click`事件获取点击信息             |
-| sanitize  | `boolean` | `false` | 可选，是否启用 HTML 内容 sanitize（防止 XSS 攻击，依赖`dompurify`）                              |
+| Parameter Name | Type      | Default Value | Description                                                                                                                                                                  |
+| -------------- | --------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| content        | `string`  | `''`          | Required. The markdown text to be rendered.                                                                                                                                  |
+| mdOptions      | `Object`  | `{}`          | Optional. Configuration options for markdown - it. See [markdown - it documentation](https://markdown-it.github.io/markdown-it/) for details.                                |
+| href           | `boolean` | `false`       | Optional. Whether to enable hyperlink parsing to the `href` attribute. By default, it is not parsed, and click information can be obtained through the `link - click` event. |
+| sanitize       | `boolean` | `false`       | Optional. Whether to enable HTML content sanitization (to prevent XSS attacks, depends on `dompurify`).                                                                      |
 
 ### Events
 
-| 事件名     | 说明                           | 回调参数                                              |
-| ---------- | ------------------------------ | ----------------------------------------------------- |
-| link-click | 当点击 markdown 中的链接时触发 | `(e: MouseEvent, href: string, text: string) => void` |
+| Event Name   | Description                                  | Callback Parameters                                   |
+| ------------ | -------------------------------------------- | ----------------------------------------------------- |
+| link - click | Triggered when a link in markdown is clicked | `(e: MouseEvent, href: string, text: string) => void` |
 
 ### Slots
 
-组件通过插槽提供灵活的自定义渲染能力，插槽优先级为：语言名插槽（如`#mermaid`）> 通用类型插槽（如`#code`）> 默认渲染。
+The component provides flexible custom rendering capabilities through slots. The slot priority is: language - named slot (such as `#mermaid`) > general - type slot (such as `#code`) > default rendering.
 
-| 插槽名     | 说明                                              | 插槽参数                                                                                            |
-| ---------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| code       | 通用代码块插槽                                    | `{ lang: string; rawCode: string }`                                                                 |
-| [lang]     | 特定语言代码块插槽（如`#javascript`、`#mermaid`） | `{ lang: string; rawCode: string }`                                                                 |
-| image      | 图片渲染插槽                                      | `{ src: string; alt: string; title: string }`                                                       |
-| text       | 文本内容插槽                                      | `{ content: string }`                                                                               |
-| emoji      | 表情渲染插槽                                      | `{ content: string }`                                                                               |
-| htmlInline | 行内 HTML 标签插槽                                | `{ originalContent: string; content: string; tags: string; attrs: Array<{[key: string]: string}> }` |
-| htmlBlock  | 块级 HTML 标签插槽                                | `{ originalContent: string; content: string; tags: string; attrs: Array<{[key: string]: string}> }` |
-| mathInline | 行内公式插槽                                      | `{ content: string }`                                                                               |
-| mathBlock  | 块级公式插槽                                      | `{ content: string }`                                                                               |
+| Slot Name  | Description                                                           | Slot Parameters                                                                                     |
+| ---------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| code       | General code block slot                                               | `{ lang: string; rawCode: string }`                                                                 |
+| [lang]     | Specific language code block slot (such as `#javascript`, `#mermaid`) | `{ lang: string; rawCode: string }`                                                                 |
+| image      | Image rendering slot                                                  | `{ src: string; alt: string; title: string }`                                                       |
+| text       | Text content slot                                                     | `{ content: string }`                                                                               |
+| emoji      | Emoji rendering slot                                                  | `{ content: string }`                                                                               |
+| htmlInline | In - line HTML tag slot                                               | `{ originalContent: string; content: string; tags: string; attrs: Array<{[key: string]: string}> }` |
+| htmlBlock  | Block - level HTML tag slot                                           | `{ originalContent: string; content: string; tags: string; attrs: Array<{[key: string]: string}> }` |
+| mathInline | In - line formula slot                                                | `{ content: string }`                                                                               |
+| mathBlock  | Block - level formula slot                                            | `{ content: string }`                                                                               |
 
-## 注意事项
+## Precautions
 
-1.  **安全性**：当需要渲染用户输入的 markdown 内容时，建议开启`sanitize: true`以防止 XSS 攻击（基于`dompurify`）。
-2.  **公式支持**：默认集成`katex`插件支持数学公式，如需自定义公式样式可通过`mathInline`和`mathBlock`插槽实现。
-3.  **扩展配置**：通过`mdOptions`可扩展 markdown-it 的功能，例如添加自定义插件或修改解析规则。
-4.  **插槽优先级**：特定语言插槽（如`#mermaid`）优先级高于通用`#code`插槽，确保特殊场景优先被处理。
+1. **Security**: When rendering markdown content entered by users, it is recommended to enable `sanitize: true` to prevent XSS attacks (based on `dompurify`).
+2. **Formula Support**: The `katex` plugin is integrated by default to support mathematical formulas. If you need to customize the formula style, it can be achieved through the `mathInline` and `mathBlock` slots.
+3. **Extended Configuration**: The `mdOptions` can be used to extend the functions of markdown - it, such as adding custom plugins or modifying parsing rules.
+4. **Slot Priority**: Specific language slots (such as `#mermaid`) have a higher priority than the general `#code` slot to ensure that special scenarios are processed first.

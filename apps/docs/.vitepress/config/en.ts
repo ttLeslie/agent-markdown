@@ -2,11 +2,10 @@ import { defineConfig } from 'vitepress';
 
 export const en = defineConfig({
   lang: 'en-US',
-  title: 'useAgent Documentation',
-  description:
-    'A solution based on Vue3 focusing on front - end application scenarios of large models',
+  title: '@useAgent/markdown',
+  description: 'A Vue3 component based on markdown - It',
   themeConfig: {
-    logo: '/logo.png',
+    // logo: '/logo.png',
     // https://vitepress.dev/reference/default-theme-config
     // nav: [
     //   { text: 'Home', link: '/' },
@@ -28,16 +27,11 @@ export const en = defineConfig({
     // ],
     sidebar: [
       {
-        text: 'Start',
-        items: [{ text: 'Introduction', link: 'en/guide/index' }],
-      },
-      {
-        text: '@useAgent/markdown',
-        items: [{ text: 'Markdown', link: 'en/packages/markdown/index' }],
-      },
-      {
-        text: '@useAgent/stream',
-        items: [{ text: 'Streaming Requests', link: 'en/packages/stream/index' }],
+        text: 'Guide',
+        items: [
+          { text: 'Quick Start', link: 'en/guide/index' },
+          { text: 'Advanced', link: 'en/packages/markdown/index' },
+        ],
       },
     ],
     socialLinks: [

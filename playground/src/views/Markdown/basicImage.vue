@@ -14,7 +14,7 @@ import { AgentMarkdown } from '@useAgent/markdown';
 
 const content = `
 
-![示例图片](https://element-plus-x.com/logo.png "一张示例图")
+![示例图片](https://thaka.bing.com/th/id/OIP.aBW9fjZTNtddeFpYAzcgJwHaLB?&rs=1&pid=ImgDetMain&o=7&rm=3 "一张示例图")
 
 
 `;

@@ -1,25 +1,28 @@
 ---
 layout: home
 hero:
-  name: useAgent
-  text: Solution for Large - model Applications
-  tagline: An easy - to - use, highly scalable, and enterprise - level best practice solution for Vue3 front - end to access large models. It helps front - end developers quickly build enterprise - level large - model applications.
+  name: '@useAgent/markdown'
+  text: LLM Application Rendering Component
+  tagline: A Vue3 component based on markdown - It, which helps developers quickly build enterprise - level
   image:
-    src: /logo.png
-    alt: useAgent
+    # src: /logo.png
+    # alt: useAgent
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/
+      link: /en/guide/
     - theme: alt
       text: View on GitHub
-      link: https://github.com/huangmingfu/vue3-turbo-component-lib-template
+      link: https://github.com/huangmingfu/vue3-turbo-component-lib-template/tree/main/apps/docs
 
 features:
-  - icon: 🌈
-    title: Markdown Component
-    details: Extreme performance, high scalability, and web security.
+  - icon: ⚡️
+    title: Extreme Rendering Performance
+    details: Generate VNode based on Markdown text to achieve incremental rendering. No lag in large - text/chart scenarios.
   - icon: 🔧
-    title: Streaming Request Library
-    details: Ready - to - use, end - to - end error capture and monitoring.
+    title: High - flexibility Expansion
+    details: Covers full - scene slots custom code blocks (including mermaid), in - line/block - level interactive components, images, etc.
+  - icon: 🛡️
+    title: Enterprise - level Security
+    details: Built - in XSS protection, supports sanitize mode (depends on dompurify), making it safer to render user content.
 ---
