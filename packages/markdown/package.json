@@ -11,6 +11,15 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.mjs",
   "types": "dist/types/index.d.ts",
+  "keywords": [
+    "vue3",
+    "component",
+    "markdown",
+    "markdown-it",
+    "markdown-it-emoji",
+    "Agent",
+    "typescript"
+  ],
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
