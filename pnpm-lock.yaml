@@ -72,9 +72,6 @@ catalogs:
     eslint-plugin-vue:
       specifier: ^9.32.0
       version: 9.32.0
-    github-markdown-css:
-      specifier: ^5.8.1
-      version: 5.8.1
     gulp:
       specifier: ^5.0.0
       version: 5.0.0
@@ -404,9 +401,6 @@ importers:
       es-toolkit:
         specifier: 'catalog:'
         version: 1.39.10
-      github-markdown-css:
-        specifier: 'catalog:'
-        version: 5.8.1
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -458,9 +452,6 @@ importers:
       es-toolkit:
         specifier: 'catalog:'
         version: 1.39.10
-      github-markdown-css:
-        specifier: 'catalog:'
-        version: 5.8.1
       highlight.js:
         specifier: 'catalog:'
         version: 11.11.1
@@ -3432,10 +3423,6 @@ packages:
     resolution: {integrity: sha512-ICsMM1Wk8xSGMowkOmPrzo2Fgmfo4bMHLNX6ytHjajRJUqvHOw/TFapQ+QG75c3X/tTDDhOSRPGC52dDbNM8FQ==}
     engines: {node: '>=16'}
     hasBin: true
-
-  github-markdown-css@5.8.1:
-    resolution: {integrity: sha512-8G+PFvqigBQSWLQjyzgpa2ThD9bo7+kDsriUIidGcRhXgmcaAWUIpCZf8DavJgc+xifjbCG+GvMyWr0XMXmc7g==}
-    engines: {node: '>=10'}
 
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -8702,8 +8689,6 @@ snapshots:
       dargs: 8.1.0
       meow: 12.1.1
       split2: 4.2.0
-
-  github-markdown-css@5.8.1: {}
 
   glob-parent@5.1.2:
     dependencies:

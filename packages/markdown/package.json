@@ -59,8 +59,7 @@
     "markdown-it-emoji": "catalog:",
     "es-toolkit": "catalog:",
     "highlight.js": "catalog:",
-    "dompurify": "catalog:",
-    "github-markdown-css": "catalog:"
+    "dompurify": "catalog:"
   },
   "peerDependencies": {
     "vue": "catalog:"

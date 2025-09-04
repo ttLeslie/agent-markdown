@@ -30,15 +30,6 @@ pnpm add agent-markdown-vue --save-dev
 bun add agent-markdown-vue --save-dev
 ```
 
-## Quick Start
-
-### Import Styles
-
-```ts
-// main.ts
-import 'agent-markdown-vue/style.css';
-```
-
 ### Basic Usage
 
 By default, the component supports the rendering of all standard Markdown syntax, including emojis, headings, text styles, lists, links, images, tables, code blocks, and formulas.
