@@ -10,7 +10,7 @@
 
 ## 自定义特殊的代码块
 
-对于特殊类型的代码块（如mermaid流程图），可通过语言名匹配的插槽（如#mermaid）单独自定义渲染逻辑。
+对于特殊类型的代码块（如`mermaid`流程图），可通过语言名匹配的插槽（如`#mermaid`）单独自定义渲染逻辑。
 
 <demo vue="markdown/basicMermaid.vue" />
 
