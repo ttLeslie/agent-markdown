@@ -191,9 +191,6 @@ importers:
       '@agent/eslint-config':
         specifier: workspace:*
         version: link:packages/lint-configs/eslint-config
-      '@agent/markdown':
-        specifier: workspace:*
-        version: link:packages/markdown
       '@agent/prettier-config':
         specifier: workspace:*
         version: link:packages/lint-configs/prettier-config
@@ -209,6 +206,9 @@ importers:
       '@commitlint/cli':
         specifier: 'catalog:'
         version: 19.7.1(@types/node@24.1.0)(typescript@5.7.3)
+      agent-markdown-vue:
+        specifier: workspace:*
+        version: link:packages/markdown
       eslint:
         specifier: 'catalog:'
         version: 9.20.1(jiti@2.4.2)
@@ -242,12 +242,12 @@ importers:
 
   apps/docs:
     dependencies:
-      '@agent/markdown':
-        specifier: workspace:*
-        version: link:../../packages/markdown
       '@agent/typescript-config':
         specifier: workspace:*
         version: link:../../packages/lint-configs/typescript-config
+      agent-markdown-vue:
+        specifier: workspace:*
+        version: link:../../packages/markdown
       vue:
         specifier: 'catalog:'
         version: 3.5.13(typescript@5.7.3)
@@ -434,9 +434,6 @@ importers:
 
   playground:
     dependencies:
-      '@agent/markdown':
-        specifier: workspace:*
-        version: link:../packages/markdown
       '@agent/typescript-config':
         specifier: workspace:*
         version: link:../packages/lint-configs/typescript-config
@@ -452,6 +449,9 @@ importers:
       '@types/markdown-it-emoji':
         specifier: 'catalog:'
         version: 3.0.1
+      agent-markdown-vue:
+        specifier: workspace:*
+        version: link:../packages/markdown
       ant-design-vue:
         specifier: 'catalog:'
         version: 4.2.6(vue@3.5.13(typescript@5.7.3))

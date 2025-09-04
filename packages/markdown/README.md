@@ -5,11 +5,11 @@
 使用包管理器安装：
 
 ```shell
-npm install @agent/markdown --save-dev
+npm install agent-markdown-vue --save-dev
 // or
-yarn add @agent/markdown --save-dev
+yarn add agent-markdown-vue --save-dev
 // or
-pnpm add @agent/markdown --save-dev
+pnpm add agent-markdown-vue --save-dev
 ```
 
 ## 引入组件
@@ -18,7 +18,7 @@ pnpm add @agent/markdown --save-dev
 
 ```ts
 // main.ts
-import '@agent/markdown/style.css';
+import 'agent-markdown-vue/style.css';
 ```
 
 ## 基本用法
@@ -30,6 +30,6 @@ import '@agent/markdown/style.css';
   <AgentMarkdown :content="content" />
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '@agent/markdown';
+import { AgentMarkdown } from 'agent-markdown-vue';
 const content = `# 你好，useAgent`
 ```

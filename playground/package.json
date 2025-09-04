@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "catalog:",
-    "@agent/markdown": "workspace:*",
+    "agent-markdown-vue": "workspace:*",
     "@agent/typescript-config": "workspace:*",
     "ant-design-vue": "catalog:",
     "vue": "catalog:",

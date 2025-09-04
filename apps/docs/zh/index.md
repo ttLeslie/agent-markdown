@@ -1,7 +1,7 @@
 ---
 layout: home
 hero:
-  name: '@agent/markdown'
+  name: 'agent-markdown-vue'
   text: LLM应用渲染组件
   tagline: 基于markdown-It的 vue3组件，帮助开发者快速搭建企业级大模型应用。
   image:

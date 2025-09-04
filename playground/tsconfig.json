@@ -17,7 +17,7 @@
     "paths": {
       "@/*": ["src/*"],
       "~/*": ["../packages/markdown/src/*"],
-      "~/@agent/markdown": ["../packages/markdown/src/index.ts"]
+      "~/agent-markdown-vue": ["../packages/markdown/src/index.ts"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]

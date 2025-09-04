@@ -2,7 +2,7 @@
   <AgentMarkdown :content="content" />
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '@agent/markdown';
+import { AgentMarkdown } from 'agent-markdown-vue';
 
 const content = `
 ## emoji :kissing: :kissing: :kissing:
@@ -38,7 +38,7 @@ Use \`@agent\` to represent inline code blocks use \`\` statements
 ### Code Blocks
 
 \`\`\`javascript
-const code = "@agent/markdown";
+const code = "agent-markdown-vue";
 \`\`\`
 
 ### Inline Formulas

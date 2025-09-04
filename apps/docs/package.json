@@ -22,7 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "@agent/typescript-config": "workspace:*",
-    "@agent/markdown": "workspace:*",
+    "agent-markdown-vue": "workspace:*",
     "vue": "catalog:"
   },
   "devDependencies": {

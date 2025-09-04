@@ -2,7 +2,7 @@
   <AgentMarkdown :content="content" :href="false" @link-click="handleLinkClick" />
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '@agent/markdown';
+import { AgentMarkdown } from 'agent-markdown-vue';
 
 const content = `
 Hyperlink：[useAgent](https://.com "useAgent 官网")

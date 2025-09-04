@@ -2,7 +2,7 @@
   "extends": "@agent/typescript-config/vite.json",
   "compilerOptions": {
     "skipLibCheck": true,
-    "types": ["vite/client", "@agent/markdown/global.d.ts"],
+    "types": ["vite/client", "agent-markdown-vue/global.d.ts"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",

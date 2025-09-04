@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { AgentMarkdown } from '@agent/markdown';
+import { AgentMarkdown } from 'agent-markdown-vue';
 
 const content = `
 Subway Line 6 links attractions like Tiger Hill, the Humble Administrator's Garden, and Pingjiang Road. It is recommended to give it priority. <span data-type="quote" data-title="Suzhou Municipal People's Government" data-content="Travel and Transportation Guide for the Ancient City during the 'May Day' Holiday"> </span>. Suzhou Subway Line 6 is in the central area of Suzhou, connecting Suzhou Center, Tiger Hill, the Humble Administrator's Garden, and Pingjiang Road.

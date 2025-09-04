@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress';
 
 export const en = defineConfig({
   lang: 'en-US',
-  title: '@agent/markdown',
+  title: 'agent-markdown-vue',
   description: 'A Vue3 component based on markdown - It',
   themeConfig: {
     // logo: '/logo.png',

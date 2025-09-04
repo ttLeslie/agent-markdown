@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress';
 
 export const zh = defineConfig({
   lang: 'zh-Hans',
-  title: '@agent/markdown',
+  title: 'agent-markdown-vue',
   description: '基于markdown-It的 vue3组件',
   themeConfig: {
     // logo: '/logo.png',

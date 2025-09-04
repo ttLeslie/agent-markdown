@@ -2,7 +2,7 @@
   <AgentMarkdown :content="content" />
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '~/@agent/markdown';
+import { AgentMarkdown } from '~/agent-markdown-vue';
 
 const content = `
 ## emoji :kissing: :kissing: :kissing:
@@ -38,7 +38,7 @@ const content = `
 ### 代码块
 
 \`\`\`javascript
-const code = "@agent/markdown";
+const code = "agent-markdown-vue";
 \`\`\`
 
 ### 行内公式

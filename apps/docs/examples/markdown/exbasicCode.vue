@@ -13,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import { AgentMarkdown } from '@agent/markdown';
+import { AgentMarkdown } from 'agent-markdown-vue';
 const content = `
 \`\`\`javascript
 const code = "useAgent/markdown";

@@ -14,13 +14,13 @@
   </AgentMarkdown>
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '@agent/markdown';
+import { AgentMarkdown } from 'agent-markdown-vue';
 
 const content = `
 ## 自定义代码块样式
 
 \`\`\`javascript
-const code = "@agent/markdown";
+const code = "agent-markdown-vue";
 \`\`\`
 
 `;

@@ -7,19 +7,19 @@ Install using a package manager:
 ::: code-group
 
 ```bash [npm]
-npm install @agent/markdown --save-dev
+npm install agent-markdown-vue --save-dev
 ```
 
 ```bash [yarn]
-yarn add @agent/markdown --save-dev
+yarn add agent-markdown-vue --save-dev
 ```
 
 ```bash [pnpm]
-pnpm add @agent/markdown --save-dev
+pnpm add agent-markdown-vue --save-dev
 ```
 
 ```bash [bun]
-bun add @agent/markdown --save-dev
+bun add agent-markdown-vue --save-dev
 ```
 
 :::
@@ -30,7 +30,7 @@ bun add @agent/markdown --save-dev
 
 ```ts
 // main.ts
-import '@agent/markdown/style.css';
+import 'agent-markdown-vue/style.css';
 ```
 
 ## Base usage

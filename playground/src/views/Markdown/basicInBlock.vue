@@ -29,7 +29,7 @@
   </AgentMarkdown>
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from '@agent/markdown';
+import { AgentMarkdown } from 'agent-markdown-vue';
 
 const content = `
 根据你的要求，我调整了代码结构:
