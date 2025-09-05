@@ -1,18 +1,20 @@
-**English** | [简体中文](./README.zh-CN.md)
+[简体中文] | **English** (./README.en.md)
+
+👉 [在线文档](https://ttleslie.github.io/agent-markdown/)
 
 # agent-markdown-vue
 
-A Vue3 component based on markdown - it, enabling developers to rapidly build enterprise - level large - model applications.
+基于 markdown-it 的 Vue3 组件，助力开发者快速搭建企业级大模型应用。
 
-## Features
+## 特性
 
-- ⚡️ Extreme Rendering Performance: Generate VNode from Markdown text to achieve incremental rendering, ensuring smooth performance in large - text/chart scenarios.
-- 🔧 High - flexibility Expansion: Covers slots for all scenarios, supporting customization of code blocks (including mermaid), in - line/block - level interactive components, images, etc.
-- 🛡️ Enterprise - level Security: Features built - in XSS protection and supports the sanitize mode (relying on dompurify), making it safer to render user - generated content.
+- ⚡️ 极致渲染性能：基于 Markdown 文本生成 VNode，实现增量渲染，大文本/图表场景无卡顿
+- 🔧 高灵活拓展：覆盖全场景插槽，支持自定义代码块（含 mermaid）、行内/块级交互组件、图片等
+- 🛡️ 企业级安全：内置 XSS 防护，支持 sanitize 模式（依赖 dompurify），渲染用户内容更安心
 
-## Installation
+## 安装
 
-Install with any package manager:
+使用任意包管理器安装：
 
 ```bash [npm]
 npm install agent-markdown-vue --save-dev
@@ -26,10 +28,9 @@ yarn add agent-markdown-vue --save-dev
 pnpm add agent-markdown-vue --save-dev
 ```
 
+## 基本用法
 
-### Basic Usage
-
-By default, the component supports the rendering of all standard Markdown syntax, including emojis, headings, text styles, lists, links, images, tables, code blocks, and formulas.
+组件默认支持所有标准 Markdown 语法渲染，包括 emoji、标题、文本样式、列表、链接、图片、表格、代码块、公式等。
 
 ```vue
 <template>
@@ -46,7 +47,7 @@ This is a **bold text** and this is an *italic text*.
 - List item 1
 - List item 2
 
-![Sample Image](https://picsum.photos/200/300)
 `;
-</script>
 ```
+
+##
