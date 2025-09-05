@@ -1,4 +1,4 @@
-[简体中文] | **English** (./README.en.md)
+[English](./README.en.md) | **简体中文**
 
 👉 [在线文档](https://ttleslie.github.io/agent-markdown/)
 
