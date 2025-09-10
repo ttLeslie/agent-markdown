@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/ttLeslie/useAgent-markdown"
   },
-  "version": "1.1.8",
+  "version": "1.2.1",
   "type": "module",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.mjs",
