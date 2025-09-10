@@ -378,7 +378,7 @@ export default function createVNode(
 
       if (tag === 'table') {
         baseProps.class = 'markdown-table-container';
-        return h('div', baseProps, [h(tag, baseProps, childNodes)]);
+        return h('div', baseProps, [h(tag, { class: 'markdown-table' }, childNodes)]);
       }
 
       return h(tag, baseProps, childNodes);
