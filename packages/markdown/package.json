@@ -1,12 +1,12 @@
 {
   "name": "agent-markdown-vue",
   "description": "@agent markdown library",
-  "homepage": "https://github.com/ttLeslie/useAgent-markdown",
+  "homepage": "https://github.com/ttLeslie/agent-markdown",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ttLeslie/useAgent-markdown"
+    "url": "https://github.com/ttLeslie/agent-markdown"
   },
-  "version": "1.2.1",
+  "version": "1.2.2",
   "type": "module",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.mjs",
@@ -40,7 +40,8 @@
   "scripts": {
     "build": "rimraf dist && vite build",
     "clean": "rimraf .turbo node_modules dist",
-    "publish": "pnpm publish"
+    "publish": "pnpm publish",
+    "pub": "node ./publish.js"
   },
   "devDependencies": {
     "@agent/typescript-config": "workspace:*",
