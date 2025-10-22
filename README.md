@@ -50,6 +50,3 @@ This is a **bold text** and this is an *italic text*.
 `;
 ```
 
-## 联系方式
-
-![_WHATDOUWANT](https://file.40017.cn/find/wx-me.png)
