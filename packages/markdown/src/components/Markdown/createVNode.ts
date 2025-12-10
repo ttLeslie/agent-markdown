@@ -176,15 +176,49 @@ export default function createVNode(
       };
 
       if (tagNames && tagNode.content) {
-        const slotResult = handleSlot('htmlInline', slots, slotParams);
+        const slotResult = handleSlot(
+          'Html' + tagNames.charAt(0).toUpperCase() + tagNames.slice(1),
+          slots,
+          slotParams,
+        );
+
+        console.log(slotParams);
+
         if (slotResult) {
           return slotResult;
-        } else {
-          return '';
         }
-      } else {
-        return '';
       }
+
+      // 没有找到插槽时，回退到默认的HTML渲染
+      if (sanitize) {
+        const sanitizeHtml = async (html: string) => {
+          try {
+            const module = await import('dompurify');
+            return module.default.sanitize(html) ?? '';
+          } catch (error) {
+            console.error('Failed to sanitize HTML:', error);
+            return html;
+          }
+        };
+
+        return h(
+          defineAsyncComponent(() =>
+            sanitizeHtml(tagNode.content || '').then((purifiedHtml) =>
+              h('span', {
+                key: index,
+                innerHTML: purifiedHtml,
+                class: 'markdown-html-inline',
+              }),
+            ),
+          ),
+        );
+      }
+
+      return h('span', {
+        key: index,
+        class: 'markdown-html-inline',
+        innerHTML: tagNode.content || '',
+      });
     }
 
     case 'html_block': {

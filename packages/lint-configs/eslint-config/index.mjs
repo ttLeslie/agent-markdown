@@ -24,6 +24,7 @@ export default tseslint.config(
       'no-var': 'error', // 禁止使用 var
       'no-duplicate-imports': 'off',
       'no-useless-escape': 'off',
+      'vue/no-unused-vars': 'off',
     },
   },
 
