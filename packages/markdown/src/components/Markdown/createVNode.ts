@@ -182,8 +182,6 @@ export default function createVNode(
           slotParams,
         );
 
-        console.log(slotParams);
-
         if (slotResult) {
           return slotResult;
         }
@@ -207,7 +205,7 @@ export default function createVNode(
               h('span', {
                 key: index,
                 innerHTML: purifiedHtml,
-                class: 'markdown-html-inline',
+                style: { display: 'contents' },
               }),
             ),
           ),
@@ -216,8 +214,8 @@ export default function createVNode(
 
       return h('span', {
         key: index,
-        class: 'markdown-html-inline',
         innerHTML: tagNode.content || '',
+        style: { display: 'contents' },
       });
     }
 
@@ -283,7 +281,7 @@ export default function createVNode(
               attrMap[attrMatch[1]] = attrMatch[2];
             }
 
-            tagNames = tagNames ? `${tagNames},${tagName}` : tagName;
+            tagNames = tagName;
             tagAttrs.push(attrMap);
           }
 
@@ -298,9 +296,16 @@ export default function createVNode(
         attrs: tagAttrs,
       };
 
-      const slotResult = handleSlot('htmlBlock', slots, slotParams);
-      if (slotResult) {
-        return slotResult;
+      if (tagNames && tagNode.content) {
+        const slotResult = handleSlot(
+          'Html' + tagNames.charAt(0).toUpperCase() + tagNames.slice(1),
+          slots,
+          slotParams,
+        );
+
+        if (slotResult) {
+          return slotResult;
+        }
       }
 
       if (sanitize) {
@@ -320,7 +325,7 @@ export default function createVNode(
               h('div', {
                 key: index,
                 innerHTML: purifiedHtml,
-                class: 'markdown-html-block',
+                style: { display: 'contents' },
               }),
             ),
           ),
@@ -329,8 +334,8 @@ export default function createVNode(
 
       return h('div', {
         key: index,
-        class: 'markdown-html-block',
         innerHTML: tagNode.content || '',
+        style: { display: 'contents' },
       });
     }
 
