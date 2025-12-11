@@ -91,13 +91,13 @@ body > [id^='dv-'] svg {
 
 ## 自定义行内可交互组件
 
-通过 `htmlInline`插槽可捕获 `markdown` 中的行内 `HTML` 标签（如`span`），并基于标签属性（`attrs`）自定义交互逻辑，适用于实现引用标注、动态提示等功能。
+通过 `HtmlSpan`插槽可捕获 `markdown` 中的行内 `HTML` 标签（如`span`），并基于标签属性（`attrs`）自定义交互逻辑，适用于实现引用标注、动态提示等功能。
 
 <demo vue="markdown/basicInline.vue" :vueFiles="{'demo': 'markdown/exbasicInline.vue'}" />
 
 ## 自定义块级可交互组件
 
-通过 `htmlBlock`插槽可处理块级 `HTML` 标签（如`div`），结合标签属性实现复杂的块级交互组件，例如带标题和元数据的自定义卡片。
+通过 `HtmlDiv`插槽可处理块级 `HTML` 标签（如`div`），结合标签属性实现复杂的块级交互组件，例如带标题和元数据的自定义卡片。
 
 <demo vue="markdown/basicBlock.vue" :vueFiles="{'demo': 'markdown/exbasicBlock.vue'}" />
 
@@ -134,17 +134,17 @@ body > [id^='dv-'] svg {
 
 组件通过插槽提供灵活的自定义渲染能力，插槽优先级为：语言名插槽（如`#mermaid`）> 通用类型插槽（如`#code`）> 默认渲染。
 
-| 插槽名     | 说明                                              | 插槽参数                                                                                            |
-| ---------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| code       | 通用代码块插槽                                    | `{ lang: string; rawCode: string }`                                                                 |
-| [lang]     | 特定语言代码块插槽（如`#javascript`、`#mermaid`） | `{ lang: string; rawCode: string }`                                                                 |
-| image      | 图片渲染插槽                                      | `{ src: string; alt: string; title: string }`                                                       |
-| text       | 文本内容插槽                                      | `{ content: string }`                                                                               |
-| emoji      | 表情渲染插槽                                      | `{ content: string }`                                                                               |
-| htmlInline | 行内 HTML 标签插槽                                | `{ originalContent: string; content: string; tags: string; attrs: Array<{[key: string]: string}> }` |
-| htmlBlock  | 块级 HTML 标签插槽                                | `{ originalContent: string; content: string; tags: string; attrs: Array<{[key: string]: string}> }` |
-| mathInline | 行内公式插槽                                      | `{ content: string }`                                                                               |
-| mathBlock  | 块级公式插槽                                      | `{ content: string }`                                                                               |
+| 插槽名       | 说明                                              | 插槽参数                                                                                            |
+| ------------ | ------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| code         | 通用代码块插槽                                    | `{ lang: string; rawCode: string }`                                                                 |
+| [lang]       | 特定语言代码块插槽（如`#javascript`、`#mermaid`） | `{ lang: string; rawCode: string }`                                                                 |
+| image        | 图片渲染插槽                                      | `{ src: string; alt: string; title: string }`                                                       |
+| text         | 文本内容插槽                                      | `{ content: string }`                                                                               |
+| emoji        | 表情渲染插槽                                      | `{ content: string }`                                                                               |
+| Html[inline] | 行内 HTML 标签插槽                                | `{ originalContent: string; content: string; tags: string; attrs: Array<{[key: string]: string}> }` |
+| Html[block]  | 块级 HTML 标签插槽                                | `{ originalContent: string; content: string; tags: string; attrs: Array<{[key: string]: string}> }` |
+| mathInline   | 行内公式插槽                                      | `{ content: string }`                                                                               |
+| mathBlock    | 块级公式插槽                                      | `{ content: string }`                                                                               |
 
 ## 注意事项
 

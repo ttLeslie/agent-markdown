@@ -7,7 +7,7 @@
     }"
     :sanitize="true"
   >
-    <template #htmlBlock="{ tags, attrs }">
+    <template #HtmlDiv="{ tags, attrs }">
       <div
         v-if="tags === 'div' && attrs[0].type === 'code'"
         style="
