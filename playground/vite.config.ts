@@ -13,7 +13,7 @@ export default defineConfig({
     },
   },
   server: {
-    port: 4444,
+    port: 6001,
   },
   optimizeDeps: {
     include: ['vue', 'ant-design-vue'],

@@ -43,3 +43,44 @@ export const stripOuterPTag = (html: string): string => {
   processed = processed.replace(/\s*<\/p\s*>\s*$/i, '');
   return processed.trim();
 };
+
+/**
+ * 匹配标签内容，生成对应的闭合标签（闭合标签/自闭合标签返回空）
+ * @param tagContent - 标签内容字符串（如：<span data-type="card">、</span>、<br/>）
+ * @param selfClosingTags - 自定义自闭合标签列表（可选，默认包含br、img、input）
+ * @returns { tagName: string; closeTag: string } - 返回提取的标签名和生成的闭合标签
+ */
+export function generateClosingTag(
+  tagContent: string,
+  selfClosingTags: string[] = ['br', 'img', 'input'],
+): { tagName: string; closeTag: string; isClose: boolean } {
+  // 1. 正则定义：匹配闭合标签和开标签
+  // 匹配 </标签名> 格式的闭合标签，捕获标签名
+  const closeTagRegex = /^<\/([a-zA-Z0-9]+)\s*>$/;
+  // 匹配 <标签名 属性...> 或 <标签名/> 格式的开标签，捕获标签名
+  const openTagRegex = /^<([a-zA-Z0-9]+)(\s+[^>]*?)?>$/;
+
+  let tagName = '';
+  let closeTag = '';
+
+  // 2. 第一步：判断是否是闭合标签，若是则返回空
+  const closeTagMatch = tagContent.match(closeTagRegex);
+  if (closeTagMatch) {
+    tagName = closeTagMatch[1]; // 也可以提取闭合标签的标签名，按需使用
+    closeTag = '';
+  } else {
+    // 3. 第二步：匹配开标签，提取标签名并生成闭合标签
+    const openTagMatch = tagContent.match(openTagRegex);
+    if (openTagMatch) {
+      tagName = openTagMatch[1];
+      // 非自闭合标签才生成闭合标签
+      if (!selfClosingTags.includes(tagName)) {
+        closeTag = `</${tagName}>`;
+      }
+      // 自闭合标签则保持 closeTag 为空
+    }
+    // 非标准标签格式，保持 tagName 和 closeTag 为空
+  }
+
+  return { tagName, closeTag, isClose: closeTagMatch !== null };
+}

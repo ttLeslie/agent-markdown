@@ -11,59 +11,7 @@
     >
       <!-- 特定标签的插槽：span -->
       <template #HtmlSpan="{ tag, attrs, content }">
-        <span class="highlight-tag">
-          🔍 {{ content }} {{ attrs[0].title }} {{ attrs[0].content }}
-        </span>
-      </template>
-
-      <!-- 特定标签的插槽：a -->
-      <template #HtmlA="{ tag, attrs, content }">
-        <a :href="attrs.href" class="custom-link" target="_blank" rel="noopener noreferrer">
-          🔗 {{ content }}
-        </a>
-      </template>
-
-      <!-- 特定标签的插槽：strong -->
-      <template #HtmlStrong="{ tag, attrs, content }">
-        <strong class="custom-strong"> 💪 {{ content }} </strong>
-      </template>
-
-      <!-- 特定标签的插槽：em -->
-      <template #HtmlEm="{ tag, attrs, content }">
-        <em class="custom-em"> ✨ {{ content }} </em>
-      </template>
-
-      <!-- 特定标签的插槽：img -->
-      <template #HtmlImg="{ tag, attrs, isSelfClosing }">
-        <div class="custom-image-container">
-          <img :src="attrs.src" :alt="attrs.alt" class="custom-image" />
-          <span v-if="attrs.title" class="image-caption">{{ attrs.title }}</span>
-        </div>
-      </template>
-
-      <!-- 特定标签的插槽：code -->
-      <template #HtmlCode="{ tag, attrs, content }">
-        <code class="custom-code"> 📝 {{ content }} </code>
-      </template>
-
-      <!-- 特定标签的插槽：mark -->
-      <template #HtmlMark="{ tag, attrs, content }">
-        <mark class="custom-mark"> 🎯 {{ content }} </mark>
-      </template>
-
-      <!-- 特定标签的插槽：sup -->
-      <template #HtmlSup="{ tag, attrs, content }">
-        <sup class="custom-sup"> ⬆️ {{ content }} </sup>
-      </template>
-
-      <!-- 特定标签的插槽：sub -->
-      <template #HtmlSub="{ tag, attrs, content }">
-        <sub class="custom-sub"> ⬇️ {{ content }} </sub>
-      </template>
-
-      <!-- 特定标签的插槽：q -->
-      <template #HtmlQ="{ tag, attrs, content }">
-        <q class="custom-q" :cite="attrs.cite"> 🗣️ {{ content }} </q>
+        <span class="highlight-tag"> 🔍 {{ content }} {{ attrs[0]['data-content'] }} </span>
       </template>
     </AgentMarkdown>
   </div>
@@ -76,8 +24,10 @@ const content = `
 # 内联标签测试
 
 ## 基础文本
-地铁 6 号线串联虎丘、拙政园、平江路等景点，建议优先使用<span data-type="quote" data-title="苏州市人民政府" data-content="五一假期，古城旅游交通出行攻略">五一假期，古城旅游交通出行攻略</span>。
 
+
+内容12313<span data-type="card" data-title="苏州市人民政府" data-content="https://thaka.bing.com/th/id/OIP.aBW9fjZTNtddeFpYAzcgJwHaLB?&rs=1&pid=ImgDetMain&o=7&rm=3"></span>12313
+11 <br>11
 `;
 </script>
 

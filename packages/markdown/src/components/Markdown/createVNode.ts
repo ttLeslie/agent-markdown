@@ -1,6 +1,6 @@
 import { Fragment, type Slots, type VNode, defineAsyncComponent, h } from 'vue';
 import type { ExtendedToken, RendererToken, TagToken } from './types';
-import { escapeHtml, getAAttr, getAttribute, stripOuterPTag } from './utils';
+import { escapeHtml, generateClosingTag, getAAttr, getAttribute, stripOuterPTag } from './utils';
 import type MarkdownIt from 'markdown-it';
 
 const processChildren = (
@@ -136,37 +136,42 @@ export default function createVNode(
         'sub',
         'q',
       ];
+      const {
+        tagName: extractedTagName,
+        closeTag: generatedCloseTag,
+        isClose,
+      } = generateClosingTag(tagNode.content || '');
+      // 将提取的标签名赋值给原变量
+      tagNames = extractedTagName;
 
-      const tagPattern = new RegExp(
-        `<((${inlineTags.join(
-          '|',
-        )}))\\b([^>]*?)>(.*?)</\\2>|<((${inlineTags.join('|')}))\\b([^/]*/?)>`,
-        'gi',
-      );
+      // 处理双标签
+      if (generatedCloseTag && !isClose) {
+        content = tagNode.content + generatedCloseTag;
+        try {
+          const parser = new DOMParser();
+          // 包裹内容为完整的HTML片段，避免解析异常
+          const doc = parser.parseFromString(`<div>${content}</div>`, 'text/html');
+          // 获取所有inlineTags中的标签
+          const elements = doc.querySelector('div')?.querySelectorAll(inlineTags.join(',')) || [];
 
-      content = content.replace(
-        tagPattern,
-        (_match, _p1, p2, attrs, innerContent, _p3, p4, selfClosingAttrs) => {
-          const tagName = p2 || p4;
-          const attributes = attrs || selfClosingAttrs || '';
+          // 重置content为解析后的纯文本（对应原有replace的返回innerContent逻辑）
+          content = doc.querySelector('div')?.textContent || '';
 
-          if (tagName) {
-            // 解析属性
+          // 遍历解析后的元素，提取标签名和属性
+          elements.forEach((el) => {
+            const tagName = el.tagName.toLowerCase();
             const attrMap: { [key: string]: string } = {};
-            const attrRegex = /(\w+)\s*=\s*["']([^"']*)["']/g;
-            let attrMatch;
-
-            while ((attrMatch = attrRegex.exec(attributes)) !== null) {
-              attrMap[attrMatch[1]] = attrMatch[2];
-            }
-
-            tagNames = tagName;
+            // 遍历所有属性，包括data-*自定义属性
+            Array.from(el.attributes).forEach((attr) => {
+              attrMap[attr.name] = attr.value;
+            });
+            tagNames = tagName; // 若有多个标签，可改为数组存储，根据你的业务调整
             tagAttrs.push(attrMap);
-          }
-
-          return innerContent || '';
-        },
-      );
+          });
+        } catch (error) {
+          console.error('Failed to parse HTML content:', error);
+        }
+      }
 
       const slotParams = {
         originalContent: tagNode.content || '',
@@ -175,7 +180,7 @@ export default function createVNode(
         attrs: tagAttrs,
       };
 
-      if (tagNames && tagNode.content) {
+      if (!isClose && tagNames && tagNode.content) {
         const slotResult = handleSlot(
           'Html' + tagNames.charAt(0).toUpperCase() + tagNames.slice(1),
           slots,
