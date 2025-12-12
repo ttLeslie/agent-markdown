@@ -1,9 +1,9 @@
 <template>
   <AgentMarkdown :content="content" :md-options="{ breaks: true, html: true }" :sanitize="true">
     <template #HtmlDiv="{ tags, attrs }">
-      <div v-if="tags === 'div' && attrs[0].type === 'code'" class="code-block">
-        <div class="top">{{ attrs[0].title }}</div>
-        <div class="bottom">创建时间：{{ attrs[0].time }}</div>
+      <div v-if="tags === 'div' && attrs[0]['data-type'] === 'code'" class="code-block">
+        <div class="top">{{ attrs[0]['data-title'] }}</div>
+        <div class="bottom">创建时间：{{ attrs[0]['data-time'] }}</div>
       </div>
     </template>
   </AgentMarkdown>

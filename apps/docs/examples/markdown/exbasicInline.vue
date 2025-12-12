@@ -8,8 +8,8 @@
     :sanitize="true"
   >
     <template #HtmlSpan="{ tags, attrs }">
-      <span v-if="tags === 'span' && attrs[0].type === 'quote'" class="quote-tag">{{
-        attrs[0].title
+      <span v-if="tags === 'span' && attrs[0]['data-type'] === 'quote'" class="quote-tag">{{
+        attrs[0]['data-title']
       }}</span>
     </template>
   </AgentMarkdown>
