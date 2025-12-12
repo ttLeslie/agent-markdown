@@ -6,7 +6,7 @@ export const getCompontentTree = (
   markdownParser: MarkdownIt,
 ): RendererToken[] => {
   const tokens = markdownParser.parse(initialMarkdown, {});
-
+  console.log(tokens);
   return tokensToCompontentTree(tokens);
 };
 

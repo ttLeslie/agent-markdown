@@ -9,7 +9,7 @@
   >
     <template #HtmlDiv="{ tags, attrs }">
       <div
-        v-if="tags === 'div' && attrs[0].type === 'code'"
+        v-if="attrs[0]['data-type'] === 'code'"
         style="
           display: flex;
           flex-direction: column;
@@ -20,16 +20,16 @@
           border-radius: 4px;
         "
       >
-        <div class="top">{{ attrs[0].title }}</div>
+        <div class="top">{{ attrs[0]['data-title'] }}</div>
         <div class="bottom" style="font-size: 12px; color: rgb(0 0 0 / 30%)">
-          创建时间：{{ attrs[0].time }}
+          创建时间：{{ attrs[0]['data-time'] }}
         </div>
       </div>
     </template>
   </AgentMarkdown>
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from 'agent-markdown-vue';
+import { AgentMarkdown } from '~/agent-markdown-vue';
 
 const content = `
 根据你的要求，我调整了代码结构:
@@ -48,6 +48,6 @@ const content = `
     }
   }
   return [...quickSort(left), pivot, ...quickSort(right)];
-}">  </div>
+}"></div>
 `;
 </script>

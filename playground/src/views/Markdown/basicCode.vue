@@ -14,7 +14,7 @@
   </AgentMarkdown>
 </template>
 <script setup lang="ts">
-import { AgentMarkdown } from 'agent-markdown-vue';
+import { AgentMarkdown } from '~/agent-markdown-vue';
 
 const content = `
 ## 自定义代码块样式
